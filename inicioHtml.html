@@ -6,11 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plano de Fundo HTML</title>
     <style>
+        
+        /* Remover margens padrão do corpo */
         body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Impede a barra de rolagem horizontal */
+        }
+        section {
+            height: 100vh; /* Altura de 100% da altura da janela do navegador */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0; /* Remover margem */
+            padding: 0; /* Remover preenchimento */
+        }
+        .section1 {
             background-image: url("https://wallpapercave.com/wp/wp5183571.gif");
+            background-color: rgb(24, 19, 73);
             background-repeat: no-repeat;
             background-size: 100%;
         }
+        .section2 { background-color: #e0e0e0; }
+        .section3 { background-color: #d0d0d0; }
 
         .center {
             text-align: justify;
@@ -20,10 +38,39 @@
 
         .h1 {
             color: rgb(0, 255, 136);
-            width: 50%;
-            margin: 40px 324px 10px;
+            width: 100%;
+            margin: 10px 324px 10px;
+            font-size: 53px;
+            animation: luzSombra 3s infinite, aparecer 1.5s forwards;
+        }
+
+        @keyframes luzSombra {
+            0% {
+                text-shadow: 0px 0px 5px rgb(0, 183, 255);
+            }
+
+            50% {
+                text-shadow: 0px 0px 25px rgb(0, 183, 255);
+            }
+
+            100% {
+                text-shadow: 0px 0px 5px rgb(0, 183, 255);
+            }
+            
 
         }
+        @keyframes aparecer {
+            from {
+                transform: translateY(-300%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0%);
+                opacity: 1;
+            }
+        }
+        
 
         .h2 {
             color: rgb(0, 255, 136);
@@ -36,6 +83,7 @@
             color: rgb(0, 255, 136);
             width: 20%;
             margin: 500px 324px 10px;
+            z-index: 1000;
 
         }
 
@@ -63,106 +111,184 @@
             top: 0;
             z-index: 1000;
         }
+
         .conteudo {
-    padding-top: 50px; 
-  }
+            padding-top: 50px;
+        }
 
         .imagem:hover {
             width: 736px;
             height: 981px;
         }
-        .barra {
-    width: 0px; /* Largura inicial da barra */
-    height: 10px;
-    background-color: rgb(60, 140, 177);
-    animation: aumentarDiminuir 2s infinite alternate; 
-    border-radius: 25px;
-  }
 
-  @keyframes aumentarDiminuir {
-    0% {
-      width: 100px; /* Largura inicial */
-    }
-    25%{
-        width: 70px;
-    }
-    50% {
-      width: 200px; /* Largura máxima */
-    }
-    75%{
-        width: 30px;
-    }
-    100% {
-      width: 100px; /* Largura inicial */
-    }
-  }
+        .barra {
+            width: 0px;
+            /* Largura inicial da barra */
+            height: 10px;
+            background-color: rgb(60, 140, 177);
+            animation: aumentarDiminuir 2s infinite alternate;
+            border-radius: 25px;
+        }
+
+        @keyframes aumentarDiminuir {
+            0% {
+                width: 100px;
+                /* Largura inicial */
+            }
+
+            25% {
+                width: 70px;
+            }
+
+            50% {
+                width: 200px;
+                /* Largura máxima */
+            }
+
+            75% {
+                width: 30px;
+            }
+
+            100% {
+                width: 100px;
+                /* Largura inicial */
+            }
+        }
+
+        .div-com-imagem {
+            position: fixed;
+            top: 50%;
+            left: 7%;
+            transform: translate(0, -10%);
+            opacity: 0.78;
+
+            z-index: 999;
+        }
+
+        .div-com-imagem img {
+            display: block;
+            width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Adiciona espaço para o conteúdo para evitar que ele seja ocultado pela div */
+        .conteudo {
+            padding-top: 80px;
+            /* Altura da div com a imagem */
+        }
+
+        @font-face {
+            font-family: 'cyberspace';
+            src: url('/home/bennyjohann/benny/Git/Html/cyberspace.ttf') format('truetype');
+        }
+
+        .font {
+            font-family: 'cyberspace';
+        }
+        .imagemglitch {
+            position: fixed;
+            width: 1350px;
+            height: auto;
+            top: 0%;
+            left: 0%;
+            transform: translate(0, 0);
+            z-index: -110;
+            opacity: 0.13;
+        }
+        
+        
     </style>
 
 
 </head>
 
 <body>
-
-    <h1 class="h1" style="position: absolute; top: 300px; left: 6px;">Sombra Digital</h1>
-    <h4 class="h2" style="position: absolute; top: 450px; left: 6px;">BennyJ0hann</h4>
-    <div class="h3">
-        <a style="color: rgb(220, 238, 141);" href="https://github.com/BennyJ0hann"> <br>Link do meu github <br> </a>
+<section section id="secao1" class="section1">
+    <h1 class="h1 font" style="position: absolute; top: 300px; left: 6px;">Sombra Digital</h1>
+    <h4 class="h2" style=" position: absolute; top: 450px; left: 6px;">BennyJ0hann</h4>
+    <div class="h3 ">
+        <a style="z-index: 1000; color: rgb(220, 238, 141);" href="https://github.com/BennyJ0hann"> <br>Link do meu github <br> </a>
     </div>
 
-    <div style="position: absolute; top: 300px; left: 60px;"><img class="imagem" src="https://i.pinimg.com/736x/51/76/f2/5176f26efdb048f92499a8d981508e3b.jpg"></div>
-    <div class="conteudo"></div>
+    <div class="div-com-imagem" id="divComImagem"><img class="imagem"
+            src="https://i.pinimg.com/736x/51/76/f2/5176f26efdb048f92499a8d981508e3b.jpg"></div>
+            
+        </section>
+
     <div class="barra" style="position: absolute; top: 25px; right: 0;"></div>
     <div class="center">
         <hr style="color: rgb(47, 201, 248);">
-        <p style="color: rgb(214, 250, 232);"><br>No coração de uma metrópole futurista, onde a luz das torres
-            corporativas rivaliza com a escuridão das vielas sujas e os sons da tecnologia ecoam pelas ruas
-            estreitas, reside um jovem chamado Ethan. Ele é um hacker talentoso, cuja mente é um labirinto de
-            circuitos digitais e algoritmos complexos.
+        <div class="conteudo">
+            <p style="color: rgb(214, 250, 232);"><br>No coração de uma metrópole futurista, onde a luz das torres
+                corporativas rivaliza com a escuridão das vielas sujas e os sons da tecnologia ecoam pelas ruas
+                estreitas, reside um jovem chamado Ethan. Ele é um hacker talentoso, cuja mente é um labirinto de
+                circuitos digitais e algoritmos complexos.
 
-            Cada manhã, Ethan acorda com o mesmo sonho perturbador: uma garota misteriosa, com olhos tão profundos
-            quanto o cosmos, sussurra seu nome em meio à estática da realidade virtual. Ela está em perigo, presa em
-            um labirinto digital de segredos obscuros.
+                Cada manhã, Ethan acorda com o mesmo sonho perturbador: uma garota misteriosa, com olhos tão profundos
+                quanto o cosmos, sussurra seu nome em meio à estática da realidade virtual. Ela está em perigo, presa em
+                um labirinto digital de segredos obscuros.
 
-            Determinado a desvendar o mistério por trás desses sonhos, Ethan mergulha em uma jornada através das
-            ruas cibernéticas da cidade. Ele encontra aliados improváveis ao longo do caminho, cada um com suas
-            próprias motivações e segredos.
+                Determinado a desvendar o mistério por trás desses sonhos, Ethan mergulha em uma jornada através das
+                ruas cibernéticas da cidade. Ele encontra aliados improváveis ao longo do caminho, cada um com suas
+                próprias motivações e segredos.
 
-            Um deles é Ada, uma hacker renegada com uma mente afiada e uma história de fugas das garras das
-            megacorporações. Ela guia Ethan pelos becos sombrios do submundo digital, onde a verdade é tão evasiva
-            quanto um holograma.
+                Um deles é Ada, uma hacker renegada com uma mente afiada e uma história de fugas das garras das
+                megacorporações. Ela guia Ethan pelos becos sombrios do submundo digital, onde a verdade é tão evasiva
+                quanto um holograma.
 
-            Outro é Zen, um ciborgue taciturno cujo corpo é uma mistura de carne e circuitos. Ele é um mercenário
-            endurecido, mas sua lealdade é tão volátil quanto o código que ele quebra. Ethan sabe que não pode
-            confiar totalmente nele, mas precisa de sua força para enfrentar os perigos que espreitam nas sombras
-            digitais.
+                Outro é Zen, um ciborgue taciturno cujo corpo é uma mistura de carne e circuitos. Ele é um mercenário
+                endurecido, mas sua lealdade é tão volátil quanto o código que ele quebra. Ethan sabe que não pode
+                confiar totalmente nele, mas precisa de sua força para enfrentar os perigos que espreitam nas sombras
+                digitais.
 
-            Juntos, o trio enfrenta obstáculos cada vez mais sinistros enquanto se aproximam da verdade por trás dos
-            sonhos de Ethan. Eles cruzam com programas de inteligência artificial enlouquecidos, guardiões virtuais
-            e megacorporações implacáveis que farão de tudo para manter seus segredos enterrados nas profundezas da
-            rede.
+                Juntos, o trio enfrenta obstáculos cada vez mais sinistros enquanto se aproximam da verdade por trás dos
+                sonhos de Ethan. Eles cruzam com programas de inteligência artificial enlouquecidos, guardiões virtuais
+                e megacorporações implacáveis que farão de tudo para manter seus segredos enterrados nas profundezas da
+                rede.
 
-            Mas, à medida que a jornada avança, as fronteiras entre realidade e ilusão começam a se distorcer. Ethan
-            começa a questionar sua própria sanidade enquanto os limites entre os sonhos e a vigília se tornam cada
-            vez mais tênues.
+                Mas, à medida que a jornada avança, as fronteiras entre realidade e ilusão começam a se distorcer. Ethan
+                começa a questionar sua própria sanidade enquanto os limites entre os sonhos e a vigília se tornam cada
+                vez mais tênues.
 
-            Finalmente, eles chegam ao epicentro do mistério, onde Ethan espera encontrar a garota de seus sonhos e
-            resgatá-la do perigo iminente. Mas quando eles alcançam o ponto final de sua busca, o que eles descobrem
-            é algo além da compreensão.
+                Finalmente, eles chegam ao epicentro do mistério, onde Ethan espera encontrar a garota de seus sonhos e
+                resgatá-la do perigo iminente. Mas quando eles alcançam o ponto final de sua busca, o que eles descobrem
+                é algo além da compreensão.
 
-            A garota dos sonhos não passa de uma projeção de sua própria mente, uma manifestação de sua necessidade
-            desesperada de escapar da monotonia de sua vida cotidiana. Os personagens que ele conheceu ao longo de
-            sua jornada não são mais do que fragmentos de sua própria imaginação, reflexos distorcidos de suas
-            próprias esperanças e medos.
+                A garota dos sonhos não passa de uma projeção de sua própria mente, uma manifestação de sua necessidade
+                desesperada de escapar da monotonia de sua vida cotidiana. Os personagens que ele conheceu ao longo de
+                sua jornada não são mais do que fragmentos de sua própria imaginação, reflexos distorcidos de suas
+                próprias esperanças e medos.
 
-            Desiludido e confuso, Ethan se vê de volta ao mundo real, questionando a natureza de sua própria
-            existência. Ele percebe que, às vezes, os maiores mistérios residem dentro de nós mesmos, e que a
-            verdadeira aventura é aquela que nos leva ao cerne de quem realmente somos.
-        </p>
+                Desiludido e confuso, Ethan se vê de volta ao mundo real, questionando a natureza de sua própria
+                existência. Ele percebe que, às vezes, os maiores mistérios residem dentro de nós mesmos, e que a
+                verdadeira aventura é aquela que nos leva ao cerne de quem realmente somos.
+            </p>
+        </div>
         </hr>
 
     </div>
+    <div>
+        
+            <img class="imagemglitch" src="https://i.gifer.com/XuPF.gif" alt="imagem" >
+        
+    </div>
 
 
+    <script>
+        window.addEventListener('scroll', function () {
+            var divComImagem = document.getElementById('divComImagem');
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > 255) { // Se o scroll for maior que 100 pixels
+                divComImagem.style.position = 'fixed'; // Fixa a posição da div no topo
+                divComImagem.style.top = '50px'; // Coloca a div 50px abaixo do topo da tela
+            } else {
+                divComImagem.style.position = 'absolute'; // Restaura a posição absoluta da div
+                divComImagem.style.top = '50%'; // Mantém a div centralizada verticalmente
+            }
+        });
+    </script>
 
 
 
