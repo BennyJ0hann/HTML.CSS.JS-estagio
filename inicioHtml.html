@@ -6,12 +6,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plano de Fundo HTML</title>
     <style>
-        /* Remover margens padrão do corpo */
+        .barra1 {
+            width: 0px;
+            height: 10px;
+            background-color: rgb(60, 140, 177);
+            animation: aumentarDiminuir1 5s infinite alternate;
+            border-radius: 25px;
+        }
+
+        @keyframes aumentarDiminuir1 {
+            0% {
+                width: 0px;
+                /* Largura inicial */
+            }
+
+            25% {
+                width: 70px;
+            }
+
+            50% {
+                width: 200px;
+                /* Largura máxima */
+            }
+
+            75% {
+                width: 30px;
+            }
+
+            100% {
+                width: 10px;
+                /* Largura inicial */
+            }
+        }
+        .barra2 {
+            width: 0px;
+            height: 10px;
+            background-color: rgb(60, 140, 177);
+            animation: aumentarDiminuir2 2s infinite alternate;
+            border-radius: 25px;
+        }
+
+        @keyframes aumentarDiminuir2 {
+            0% {
+                width: 50px;
+                /* Largura inicial */
+            }
+
+            25% {
+                width: 100px;
+            }
+
+            50% {
+                width: 50px;
+                /* Largura máxima */
+            }
+
+            75% {
+                width: 10px;
+            }
+
+            100% {
+                width: 25px;
+                /* Largura inicial */
+            }
+        }.barra3 {
+            width: 0px;
+            height: 10px;
+            background-color: rgb(60, 140, 177);
+            animation: aumentarDiminuir3 6s infinite alternate;
+            border-radius: 25px;
+        }
+
+        @keyframes aumentarDiminuir3 {
+            0% {
+                width: 30px;
+                /* Largura inicial */
+            }
+
+            25% {
+                width: 0px;
+            }
+
+            50% {
+                width: 20px;
+                /* Largura máxima */
+            }
+
+            75% {
+                width: 100px;
+            }
+
+            100% {
+                width: 15px;
+                /* Largura inicial */
+            }
+        }.barra4 {
+            width: 0px;
+            height: 10px;
+            background-color: rgb(60, 140, 177);
+            animation: aumentarDiminuir4 4s infinite alternate;
+            border-radius: 25px;
+        }
+
+        @keyframes aumentarDiminuir4 {
+            0% {
+                width: 120px;
+            }
+
+            25% {
+                width: 20px;
+            }
+
+            50% {
+                width: 0px;
+            }
+
+            75% {
+                width: 30px;
+            }
+
+            100% {
+                width: 90px;
+            }
+        }
+        
         body {
-            margin: 0;
+            margin: 0;/* Remover margens padrão do corpo */
             padding: 0;
-            overflow-x: hidden;
-            /* Impede a barra de rolagem horizontal */
+            overflow-x: hidden;/* Impede a barra de rolagem horizontal */
+            background-color: black;
         }
 
         section {
@@ -28,29 +151,52 @@
 
         .section1 {
             background-image: url("https://wallpapercave.com/wp/wp5183571.gif");
-            background-color: rgb(24, 19, 73);
+            background-color: rgb(0, 0, 0);
             background-repeat: no-repeat;
             background-size: 100%;
         }
 
         .section2 {
-            background-color: #e0e0e0;
+            background-image: url("https://wallpapercave.com/wp/wp12549833.png");
+            background-repeat: no-repeat;
+            background-color: #000000;
+            background-size: 100%;
+            opacity: 0%;
+            background-position: 0px,300px;
+        }
+        .section2.executado {
+            background-image: url("https://wallpapercave.com/wp/wp12549833.png");
+            background-repeat: no-repeat;
+            background-color: #000000;
+            background-size: 100%;
+            background-position: 0px,300px;
+
+            animation: back1 4s forwards;
+        }
+        @keyframes back1 {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         .section3 {
-            background-color: #d0d0d0;
+            background-color: #000000;
         }
 
         .center {
             text-align: justify;
             width: 50%;
-            margin: 0 auto;
+            margin: 0;
         }
 
         .h1 {
             color: rgb(0, 255, 136);
             width: 100%;
-            margin: 10px 324px 10px;
+            margin: 10px 420px 10px;
             font-size: 53px;
             animation: luzSombra 3s infinite, aparecer 1.5s forwards;
         }
@@ -93,8 +239,8 @@
 
         .h3 {
             color: rgb(0, 255, 136);
-            width: 20%;
-            margin: 500px 324px 10px;
+            width: 49.5%;
+            margin: 330px 10px 10px;
             z-index: 1000;
 
         }
@@ -114,81 +260,81 @@
             width: 300px;
         }
 
-        .imagem {
-            width: 200px;
-            height: 266px;
-            transition: width 0.5s, height 0.5s;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+        
 
-        .conteudo {
-            padding-top: 50px;
-        }
-
-        .imagem:hover {
-            width: 736px;
-            height: 981px;
-        }
-
-        .barra {
-            width: 0px;
-            /* Largura inicial da barra */
-            height: 10px;
-            background-color: rgb(60, 140, 177);
-            animation: aumentarDiminuir 2s infinite alternate;
-            border-radius: 25px;
-        }
-
-        @keyframes aumentarDiminuir {
-            0% {
-                width: 100px;
-                /* Largura inicial */
-            }
-
-            25% {
-                width: 70px;
-            }
-
-            50% {
-                width: 200px;
-                /* Largura máxima */
-            }
-
-            75% {
-                width: 30px;
-            }
-
-            100% {
-                width: 100px;
-                /* Largura inicial */
-            }
-        }
+        
 
         .div-com-imagem {
             position: fixed;
-            top: 50%;
-            left: 7%;
-            transform: translate(0, -10%);
-            opacity: 0.78;
-
-            z-index: 999;
-        }
-
-        .div-com-imagem img {
+            top: 46%;
+            left: 5%;
+            
+            opacity: 0.9;
+            z-index: 1000;
             display: block;
             width: 200px;
             margin-left: auto;
             margin-right: auto;
         }
-
-        /* Adiciona espaço para o conteúdo para evitar que ele seja ocultado pela div */
         .conteudo {
-            padding-top: 80px;
-            /* Altura da div com a imagem */
+            padding-top: 10px;
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo com opacidade */
+            padding: 0px 10px;
+            border-radius: 10px;
+            display: none;
+               
         }
+        .conteudo.executado {
+            padding-top: 10px;
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo com opacidade */
+            padding: 0px 10px;
+            border-radius: 10px;
+            
+            animation: aparecer1 1.5s forwards;
+               
+        }
+        @keyframes aparecer1 {
+            from{
+                transform: translateY(-20%);
+                opacity: 0;
+            }to{
+                transform: translateY(0%);
+                opacity: 1;
+            }
+        }
+        .imagem {
+            width: 200px;
+            height: 266px;
+            transform: translate(0,-10%); 
+            transition: width 0.5s, height 0.5s, transform 0.5s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .imagem:hover {
+            width: 525px;
+            height: 700px;
+            transform: translate(0,-50%); 
+            top: 50%;
+            left: 50%;
+        }
+        .imagem2 {
+            width: 200px;
+            height: 266px;
+            transform: translate(0, -10%); 
+            transition: width 0.5s, height 0.5s, transform 0.5s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .imagem2:hover {
+            width: 525px;
+            height: 700px;
+            transform: translate(0,-10%); 
+            top: 50%;
+            left: 50%;
+        }
+        
+        
+
 
         @font-face {
             font-family: 'cyberspace';
@@ -198,15 +344,22 @@
         .font {
             font-family: 'cyberspace';
         }
+        @font-face {
+            font-family: 'NEO CYBERN';
+            src: url('/home/bennyjohann/benny/Git/Html/NEO CYBERN.otf') format('opentype');
+        }
+        .font2{
+            font-family:'NEO CYBERN' ;
+        }
 
         .imagemglitch {
             position: fixed;
-            width: 1350px;
+            width: 1500px;
             height: auto;
             top: 0%;
             left: 0%;
             transform: translate(0, 0);
-            z-index: -110;
+            z-index: 100;
             opacity: 0.13;
         }
     </style>
@@ -215,23 +368,45 @@
 </head>
 
 <body>
-    <section section id="secao1" class="section1">
+    <section section id="secao1" class="section1" style="background-color: black;">
         <h1 class="h1 font" style="position: absolute; top: 300px; left: 6px;">Sombra Digital</h1>
         <h4 class="h2" style=" position: absolute; top: 450px; left: 6px;">BennyJ0hann</h4>
-        <div class="h3 ">
-            <a style="z-index: 1000; color: rgb(220, 238, 141);" href="https://github.com/BennyJ0hann"> <br>Link do meu
+        <div class="h3">
+            <a style="z-index: 999; color: rgb(220, 238, 141);" href="https://github.com/BennyJ0hann"> <br>Link do meu
                 github <br> </a>
         </div>
 
-        <div class="div-com-imagem" id="divComImagem"><img class="imagem"
+        <div class="div-com-imagem " id="divComImagem"><img class="imagem" id="troca"
                 src="https://i.pinimg.com/736x/51/76/f2/5176f26efdb048f92499a8d981508e3b.jpg"></div>
+        <div>
+
+            <img class="imagemglitch" src="https://i.gifer.com/XuPF.gif" alt="imagem">
+
+        </div>
+        <div class="barra1" style="position: absolute; top: 25px; right: 0;"></div>
+        <div class="barra2" style="position: absolute; top: 50px; right: 0;"></div>
+        <div class="barra3" style="position: absolute; top: 75px; right: 0;"></div>
+        <div class="barra4" style="position: absolute; top: 100px; right: 0;"></div>
 
     </section>
     <section section id="secao2" class="section2">
-        <div class="barra" style="position: absolute; top: 25px; right: 0;"></div>
+        
         <div class="center">
-            <hr style="color: rgb(47, 201, 248);">
-            <div class="conteudo">
+            <div class="conteudo font2" id="pagina1">
+                <p  style="color: rgb(214, 250, 232);font-size: 160%;"><br>No coração de uma metrópole futurista, onde a luz das torres
+                    corporativas rivaliza com a escuridão das vielas sujas e os sons da tecnologia ecoam pelas ruas
+                    estreitas, reside um jovem chamado Ethan. Ele é um hacker talentoso, cuja mente é um labirinto de
+                    circuitos digitais e algoritmos complexos.
+                </p>
+            </div>
+            
+
+        </div>
+    </section>
+    <section section id="secao2" class="section3">
+        
+        <div class="center">
+            <div class="conteudo font2" id="pagina2">
                 <p style="color: rgb(214, 250, 232);"><br>No coração de uma metrópole futurista, onde a luz das torres
                     corporativas rivaliza com a escuridão das vielas sujas e os sons da tecnologia ecoam pelas ruas
                     estreitas, reside um jovem chamado Ethan. Ele é um hacker talentoso, cuja mente é um labirinto de
@@ -291,29 +466,701 @@
                     verdadeira aventura é aquela que nos leva ao cerne de quem realmente somos.
                 </p>
             </div>
-            </hr>
+            
 
         </div>
     </section>
-    <div>
+    <section section id="secao2" class="section2">
+        
+        <div class="center">
+            <div class="conteudo font2" id="pagina3">
+                <p style="color: rgb(214, 250, 232);"><br>No coração de uma metrópole futurista, onde a luz das torres
+                    corporativas rivaliza com a escuridão das vielas sujas e os sons da tecnologia ecoam pelas ruas
+                    estreitas, reside um jovem chamado Ethan. Ele é um hacker talentoso, cuja mente é um labirinto de
+                    circuitos digitais e algoritmos complexos.
 
-        <img class="imagemglitch" src="https://i.gifer.com/XuPF.gif" alt="imagem">
+                    Cada manhã, Ethan acorda com o mesmo sonho perturbador: uma garota misteriosa, com olhos tão
+                    profundos
+                    quanto o cosmos, sussurra seu nome em meio à estática da realidade virtual. Ela está em perigo,
+                    presa em
+                    um labirinto digital de segredos obscuros.
 
-    </div>
+                    Determinado a desvendar o mistério por trás desses sonhos, Ethan mergulha em uma jornada através das
+                    ruas cibernéticas da cidade. Ele encontra aliados improváveis ao longo do caminho, cada um com suas
+                    próprias motivações e segredos.
+
+                    Um deles é Ada, uma hacker renegada com uma mente afiada e uma história de fugas das garras das
+                    megacorporações. Ela guia Ethan pelos becos sombrios do submundo digital, onde a verdade é tão
+                    evasiva
+                    quanto um holograma.
+
+                    Outro é Zen, um ciborgue taciturno cujo corpo é uma mistura de carne e circuitos. Ele é um
+                    mercenário
+                    endurecido, mas sua lealdade é tão volátil quanto o código que ele quebra. Ethan sabe que não pode
+                    confiar totalmente nele, mas precisa de sua força para enfrentar os perigos que espreitam nas
+                    sombras
+                    digitais.
+
+                    Juntos, o trio enfrenta obstáculos cada vez mais sinistros enquanto se aproximam da verdade por trás
+                    dos
+                    sonhos de Ethan. Eles cruzam com programas de inteligência artificial enlouquecidos, guardiões
+                    virtuais
+                    e megacorporações implacáveis que farão de tudo para manter seus segredos enterrados nas profundezas
+                    da
+                    rede.
+
+                    Mas, à medida que a jornada avança, as fronteiras entre realidade e ilusão começam a se distorcer.
+                    Ethan
+                    começa a questionar sua própria sanidade enquanto os limites entre os sonhos e a vigília se tornam
+                    cada
+                    vez mais tênues.
+
+                    Finalmente, eles chegam ao epicentro do mistério, onde Ethan espera encontrar a garota de seus
+                    sonhos e
+                    resgatá-la do perigo iminente. Mas quando eles alcançam o ponto final de sua busca, o que eles
+                    descobrem
+                    é algo além da compreensão.
+
+                    A garota dos sonhos não passa de uma projeção de sua própria mente, uma manifestação de sua
+                    necessidade
+                    desesperada de escapar da monotonia de sua vida cotidiana. Os personagens que ele conheceu ao longo
+                    de
+                    sua jornada não são mais do que fragmentos de sua própria imaginação, reflexos distorcidos de suas
+                    próprias esperanças e medos.
+
+                    Desiludido e confuso, Ethan se vê de volta ao mundo real, questionando a natureza de sua própria
+                    existência. Ele percebe que, às vezes, os maiores mistérios residem dentro de nós mesmos, e que a
+                    verdadeira aventura é aquela que nos leva ao cerne de quem realmente somos.
+                </p>
+            </div>
+            
+
+        </div>
+    </section>
+    <section section id="secao2" class="section2">
+        
+        <div class="center">
+            <div class="conteudo font2" id="pagina4">
+                <p style="color: rgb(214, 250, 232);"><br>No coração de uma metrópole futurista, onde a luz das torres
+                    corporativas rivaliza com a escuridão das vielas sujas e os sons da tecnologia ecoam pelas ruas
+                    estreitas, reside um jovem chamado Ethan. Ele é um hacker talentoso, cuja mente é um labirinto de
+                    circuitos digitais e algoritmos complexos.
+
+                    Cada manhã, Ethan acorda com o mesmo sonho perturbador: uma garota misteriosa, com olhos tão
+                    profundos
+                    quanto o cosmos, sussurra seu nome em meio à estática da realidade virtual. Ela está em perigo,
+                    presa em
+                    um labirinto digital de segredos obscuros.
+
+                    Determinado a desvendar o mistério por trás desses sonhos, Ethan mergulha em uma jornada através das
+                    ruas cibernéticas da cidade. Ele encontra aliados improváveis ao longo do caminho, cada um com suas
+                    próprias motivações e segredos.
+
+                    Um deles é Ada, uma hacker renegada com uma mente afiada e uma história de fugas das garras das
+                    megacorporações. Ela guia Ethan pelos becos sombrios do submundo digital, onde a verdade é tão
+                    evasiva
+                    quanto um holograma.
+
+                    Outro é Zen, um ciborgue taciturno cujo corpo é uma mistura de carne e circuitos. Ele é um
+                    mercenário
+                    endurecido, mas sua lealdade é tão volátil quanto o código que ele quebra. Ethan sabe que não pode
+                    confiar totalmente nele, mas precisa de sua força para enfrentar os perigos que espreitam nas
+                    sombras
+                    digitais.
+
+                    Juntos, o trio enfrenta obstáculos cada vez mais sinistros enquanto se aproximam da verdade por trás
+                    dos
+                    sonhos de Ethan. Eles cruzam com programas de inteligência artificial enlouquecidos, guardiões
+                    virtuais
+                    e megacorporações implacáveis que farão de tudo para manter seus segredos enterrados nas profundezas
+                    da
+                    rede.
+
+                    Mas, à medida que a jornada avança, as fronteiras entre realidade e ilusão começam a se distorcer.
+                    Ethan
+                    começa a questionar sua própria sanidade enquanto os limites entre os sonhos e a vigília se tornam
+                    cada
+                    vez mais tênues.
+
+                    Finalmente, eles chegam ao epicentro do mistério, onde Ethan espera encontrar a garota de seus
+                    sonhos e
+                    resgatá-la do perigo iminente. Mas quando eles alcançam o ponto final de sua busca, o que eles
+                    descobrem
+                    é algo além da compreensão.
+
+                    A garota dos sonhos não passa de uma projeção de sua própria mente, uma manifestação de sua
+                    necessidade
+                    desesperada de escapar da monotonia de sua vida cotidiana. Os personagens que ele conheceu ao longo
+                    de
+                    sua jornada não são mais do que fragmentos de sua própria imaginação, reflexos distorcidos de suas
+                    próprias esperanças e medos.
+
+                    Desiludido e confuso, Ethan se vê de volta ao mundo real, questionando a natureza de sua própria
+                    existência. Ele percebe que, às vezes, os maiores mistérios residem dentro de nós mesmos, e que a
+                    verdadeira aventura é aquela que nos leva ao cerne de quem realmente somos.
+                </p>
+            </div>
+            
+
+        </div>
+    </section>
+    <section section id="secao2" class="section2">
+        
+        <div class="center">
+            <div class="conteudo font2" id="pagina5">
+                <p style="color: rgb(214, 250, 232);"><br>No coração de uma metrópole futurista, onde a luz das torres
+                    corporativas rivaliza com a escuridão das vielas sujas e os sons da tecnologia ecoam pelas ruas
+                    estreitas, reside um jovem chamado Ethan. Ele é um hacker talentoso, cuja mente é um labirinto de
+                    circuitos digitais e algoritmos complexos.
+
+                    Cada manhã, Ethan acorda com o mesmo sonho perturbador: uma garota misteriosa, com olhos tão
+                    profundos
+                    quanto o cosmos, sussurra seu nome em meio à estática da realidade virtual. Ela está em perigo,
+                    presa em
+                    um labirinto digital de segredos obscuros.
+
+                    Determinado a desvendar o mistério por trás desses sonhos, Ethan mergulha em uma jornada através das
+                    ruas cibernéticas da cidade. Ele encontra aliados improváveis ao longo do caminho, cada um com suas
+                    próprias motivações e segredos.
+
+                    Um deles é Ada, uma hacker renegada com uma mente afiada e uma história de fugas das garras das
+                    megacorporações. Ela guia Ethan pelos becos sombrios do submundo digital, onde a verdade é tão
+                    evasiva
+                    quanto um holograma.
+
+                    Outro é Zen, um ciborgue taciturno cujo corpo é uma mistura de carne e circuitos. Ele é um
+                    mercenário
+                    endurecido, mas sua lealdade é tão volátil quanto o código que ele quebra. Ethan sabe que não pode
+                    confiar totalmente nele, mas precisa de sua força para enfrentar os perigos que espreitam nas
+                    sombras
+                    digitais.
+
+                    Juntos, o trio enfrenta obstáculos cada vez mais sinistros enquanto se aproximam da verdade por trás
+                    dos
+                    sonhos de Ethan. Eles cruzam com programas de inteligência artificial enlouquecidos, guardiões
+                    virtuais
+                    e megacorporações implacáveis que farão de tudo para manter seus segredos enterrados nas profundezas
+                    da
+                    rede.
+
+                    Mas, à medida que a jornada avança, as fronteiras entre realidade e ilusão começam a se distorcer.
+                    Ethan
+                    começa a questionar sua própria sanidade enquanto os limites entre os sonhos e a vigília se tornam
+                    cada
+                    vez mais tênues.
+
+                    Finalmente, eles chegam ao epicentro do mistério, onde Ethan espera encontrar a garota de seus
+                    sonhos e
+                    resgatá-la do perigo iminente. Mas quando eles alcançam o ponto final de sua busca, o que eles
+                    descobrem
+                    é algo além da compreensão.
+
+                    A garota dos sonhos não passa de uma projeção de sua própria mente, uma manifestação de sua
+                    necessidade
+                    desesperada de escapar da monotonia de sua vida cotidiana. Os personagens que ele conheceu ao longo
+                    de
+                    sua jornada não são mais do que fragmentos de sua própria imaginação, reflexos distorcidos de suas
+                    próprias esperanças e medos.
+
+                    Desiludido e confuso, Ethan se vê de volta ao mundo real, questionando a natureza de sua própria
+                    existência. Ele percebe que, às vezes, os maiores mistérios residem dentro de nós mesmos, e que a
+                    verdadeira aventura é aquela que nos leva ao cerne de quem realmente somos.
+                </p>
+            </div>
+            
+
+        </div>
+    </section>
+    <section section id="secao2" class="section2">
+        
+        <div class="center">
+            <div class="conteudo font2" id="pagina6">
+                <p style="color: rgb(214, 250, 232);"><br>No coração de uma metrópole futurista, onde a luz das torres
+                    corporativas rivaliza com a escuridão das vielas sujas e os sons da tecnologia ecoam pelas ruas
+                    estreitas, reside um jovem chamado Ethan. Ele é um hacker talentoso, cuja mente é um labirinto de
+                    circuitos digitais e algoritmos complexos.
+
+                    Cada manhã, Ethan acorda com o mesmo sonho perturbador: uma garota misteriosa, com olhos tão
+                    profundos
+                    quanto o cosmos, sussurra seu nome em meio à estática da realidade virtual. Ela está em perigo,
+                    presa em
+                    um labirinto digital de segredos obscuros.
+
+                    Determinado a desvendar o mistério por trás desses sonhos, Ethan mergulha em uma jornada através das
+                    ruas cibernéticas da cidade. Ele encontra aliados improváveis ao longo do caminho, cada um com suas
+                    próprias motivações e segredos.
+
+                    Um deles é Ada, uma hacker renegada com uma mente afiada e uma história de fugas das garras das
+                    megacorporações. Ela guia Ethan pelos becos sombrios do submundo digital, onde a verdade é tão
+                    evasiva
+                    quanto um holograma.
+
+                    Outro é Zen, um ciborgue taciturno cujo corpo é uma mistura de carne e circuitos. Ele é um
+                    mercenário
+                    endurecido, mas sua lealdade é tão volátil quanto o código que ele quebra. Ethan sabe que não pode
+                    confiar totalmente nele, mas precisa de sua força para enfrentar os perigos que espreitam nas
+                    sombras
+                    digitais.
+
+                    Juntos, o trio enfrenta obstáculos cada vez mais sinistros enquanto se aproximam da verdade por trás
+                    dos
+                    sonhos de Ethan. Eles cruzam com programas de inteligência artificial enlouquecidos, guardiões
+                    virtuais
+                    e megacorporações implacáveis que farão de tudo para manter seus segredos enterrados nas profundezas
+                    da
+                    rede.
+
+                    Mas, à medida que a jornada avança, as fronteiras entre realidade e ilusão começam a se distorcer.
+                    Ethan
+                    começa a questionar sua própria sanidade enquanto os limites entre os sonhos e a vigília se tornam
+                    cada
+                    vez mais tênues.
+
+                    Finalmente, eles chegam ao epicentro do mistério, onde Ethan espera encontrar a garota de seus
+                    sonhos e
+                    resgatá-la do perigo iminente. Mas quando eles alcançam o ponto final de sua busca, o que eles
+                    descobrem
+                    é algo além da compreensão.
+
+                    A garota dos sonhos não passa de uma projeção de sua própria mente, uma manifestação de sua
+                    necessidade
+                    desesperada de escapar da monotonia de sua vida cotidiana. Os personagens que ele conheceu ao longo
+                    de
+                    sua jornada não são mais do que fragmentos de sua própria imaginação, reflexos distorcidos de suas
+                    próprias esperanças e medos.
+
+                    Desiludido e confuso, Ethan se vê de volta ao mundo real, questionando a natureza de sua própria
+                    existência. Ele percebe que, às vezes, os maiores mistérios residem dentro de nós mesmos, e que a
+                    verdadeira aventura é aquela que nos leva ao cerne de quem realmente somos.
+                </p>
+            </div>
+            
+
+        </div>
+    </section>
+    <section section id="secao2" class="section2">
+        
+        <div class="center">
+            <div class="conteudo font2" id="pagina7">
+                <p style="color: rgb(214, 250, 232);"><br>No coração de uma metrópole futurista, onde a luz das torres
+                    corporativas rivaliza com a escuridão das vielas sujas e os sons da tecnologia ecoam pelas ruas
+                    estreitas, reside um jovem chamado Ethan. Ele é um hacker talentoso, cuja mente é um labirinto de
+                    circuitos digitais e algoritmos complexos.
+
+                    Cada manhã, Ethan acorda com o mesmo sonho perturbador: uma garota misteriosa, com olhos tão
+                    profundos
+                    quanto o cosmos, sussurra seu nome em meio à estática da realidade virtual. Ela está em perigo,
+                    presa em
+                    um labirinto digital de segredos obscuros.
+
+                    Determinado a desvendar o mistério por trás desses sonhos, Ethan mergulha em uma jornada através das
+                    ruas cibernéticas da cidade. Ele encontra aliados improváveis ao longo do caminho, cada um com suas
+                    próprias motivações e segredos.
+
+                    Um deles é Ada, uma hacker renegada com uma mente afiada e uma história de fugas das garras das
+                    megacorporações. Ela guia Ethan pelos becos sombrios do submundo digital, onde a verdade é tão
+                    evasiva
+                    quanto um holograma.
+
+                    Outro é Zen, um ciborgue taciturno cujo corpo é uma mistura de carne e circuitos. Ele é um
+                    mercenário
+                    endurecido, mas sua lealdade é tão volátil quanto o código que ele quebra. Ethan sabe que não pode
+                    confiar totalmente nele, mas precisa de sua força para enfrentar os perigos que espreitam nas
+                    sombras
+                    digitais.
+
+                    Juntos, o trio enfrenta obstáculos cada vez mais sinistros enquanto se aproximam da verdade por trás
+                    dos
+                    sonhos de Ethan. Eles cruzam com programas de inteligência artificial enlouquecidos, guardiões
+                    virtuais
+                    e megacorporações implacáveis que farão de tudo para manter seus segredos enterrados nas profundezas
+                    da
+                    rede.
+
+                    Mas, à medida que a jornada avança, as fronteiras entre realidade e ilusão começam a se distorcer.
+                    Ethan
+                    começa a questionar sua própria sanidade enquanto os limites entre os sonhos e a vigília se tornam
+                    cada
+                    vez mais tênues.
+
+                    Finalmente, eles chegam ao epicentro do mistério, onde Ethan espera encontrar a garota de seus
+                    sonhos e
+                    resgatá-la do perigo iminente. Mas quando eles alcançam o ponto final de sua busca, o que eles
+                    descobrem
+                    é algo além da compreensão.
+
+                    A garota dos sonhos não passa de uma projeção de sua própria mente, uma manifestação de sua
+                    necessidade
+                    desesperada de escapar da monotonia de sua vida cotidiana. Os personagens que ele conheceu ao longo
+                    de
+                    sua jornada não são mais do que fragmentos de sua própria imaginação, reflexos distorcidos de suas
+                    próprias esperanças e medos.
+
+                    Desiludido e confuso, Ethan se vê de volta ao mundo real, questionando a natureza de sua própria
+                    existência. Ele percebe que, às vezes, os maiores mistérios residem dentro de nós mesmos, e que a
+                    verdadeira aventura é aquela que nos leva ao cerne de quem realmente somos.
+                </p>
+            </div>
+            
+
+        </div>
+    </section>
+    <section section id="secao2" class="section2">
+        
+        <div class="center">
+            <div class="conteudo font2" id="pagina8">
+                <p style="color: rgb(214, 250, 232);"><br>No coração de uma metrópole futurista, onde a luz das torres
+                    corporativas rivaliza com a escuridão das vielas sujas e os sons da tecnologia ecoam pelas ruas
+                    estreitas, reside um jovem chamado Ethan. Ele é um hacker talentoso, cuja mente é um labirinto de
+                    circuitos digitais e algoritmos complexos.
+
+                    Cada manhã, Ethan acorda com o mesmo sonho perturbador: uma garota misteriosa, com olhos tão
+                    profundos
+                    quanto o cosmos, sussurra seu nome em meio à estática da realidade virtual. Ela está em perigo,
+                    presa em
+                    um labirinto digital de segredos obscuros.
+
+                    Determinado a desvendar o mistério por trás desses sonhos, Ethan mergulha em uma jornada através das
+                    ruas cibernéticas da cidade. Ele encontra aliados improváveis ao longo do caminho, cada um com suas
+                    próprias motivações e segredos.
+
+                    Um deles é Ada, uma hacker renegada com uma mente afiada e uma história de fugas das garras das
+                    megacorporações. Ela guia Ethan pelos becos sombrios do submundo digital, onde a verdade é tão
+                    evasiva
+                    quanto um holograma.
+
+                    Outro é Zen, um ciborgue taciturno cujo corpo é uma mistura de carne e circuitos. Ele é um
+                    mercenário
+                    endurecido, mas sua lealdade é tão volátil quanto o código que ele quebra. Ethan sabe que não pode
+                    confiar totalmente nele, mas precisa de sua força para enfrentar os perigos que espreitam nas
+                    sombras
+                    digitais.
+
+                    Juntos, o trio enfrenta obstáculos cada vez mais sinistros enquanto se aproximam da verdade por trás
+                    dos
+                    sonhos de Ethan. Eles cruzam com programas de inteligência artificial enlouquecidos, guardiões
+                    virtuais
+                    e megacorporações implacáveis que farão de tudo para manter seus segredos enterrados nas profundezas
+                    da
+                    rede.
+
+                    Mas, à medida que a jornada avança, as fronteiras entre realidade e ilusão começam a se distorcer.
+                    Ethan
+                    começa a questionar sua própria sanidade enquanto os limites entre os sonhos e a vigília se tornam
+                    cada
+                    vez mais tênues.
+
+                    Finalmente, eles chegam ao epicentro do mistério, onde Ethan espera encontrar a garota de seus
+                    sonhos e
+                    resgatá-la do perigo iminente. Mas quando eles alcançam o ponto final de sua busca, o que eles
+                    descobrem
+                    é algo além da compreensão.
+
+                    A garota dos sonhos não passa de uma projeção de sua própria mente, uma manifestação de sua
+                    necessidade
+                    desesperada de escapar da monotonia de sua vida cotidiana. Os personagens que ele conheceu ao longo
+                    de
+                    sua jornada não são mais do que fragmentos de sua própria imaginação, reflexos distorcidos de suas
+                    próprias esperanças e medos.
+
+                    Desiludido e confuso, Ethan se vê de volta ao mundo real, questionando a natureza de sua própria
+                    existência. Ele percebe que, às vezes, os maiores mistérios residem dentro de nós mesmos, e que a
+                    verdadeira aventura é aquela que nos leva ao cerne de quem realmente somos.
+                </p>
+            </div>
+            
+
+        </div>
+    </section>
+    <section section id="secao2" class="section2">
+        
+        <div class="center">
+            <div class="conteudo font2" id="pagina9">
+                <p style="color: rgb(214, 250, 232); "><br>No coração de uma metrópole futurista, onde a luz das torres
+                    corporativas rivaliza com a escuridão das vielas sujas e os sons da tecnologia ecoam pelas ruas
+                    estreitas, reside um jovem chamado Ethan. Ele é um hacker talentoso, cuja mente é um labirinto de
+                    circuitos digitais e algoritmos complexos.
+
+                    Cada manhã, Ethan acorda com o mesmo sonho perturbador: uma garota misteriosa, com olhos tão
+                    profundos
+                    quanto o cosmos, sussurra seu nome em meio à estática da realidade virtual. Ela está em perigo,
+                    presa em
+                    um labirinto digital de segredos obscuros.
+
+                    Determinado a desvendar o mistério por trás desses sonhos, Ethan mergulha em uma jornada através das
+                    ruas cibernéticas da cidade. Ele encontra aliados improváveis ao longo do caminho, cada um com suas
+                    próprias motivações e segredos.
+
+                    Um deles é Ada, uma hacker renegada com uma mente afiada e uma história de fugas das garras das
+                    megacorporações. Ela guia Ethan pelos becos sombrios do submundo digital, onde a verdade é tão
+                    evasiva
+                    quanto um holograma.
+
+                    Outro é Zen, um ciborgue taciturno cujo corpo é uma mistura de carne e circuitos. Ele é um
+                    mercenário
+                    endurecido, mas sua lealdade é tão volátil quanto o código que ele quebra. Ethan sabe que não pode
+                    confiar totalmente nele, mas precisa de sua força para enfrentar os perigos que espreitam nas
+                    sombras
+                    digitais.
+
+                    Juntos, o trio enfrenta obstáculos cada vez mais sinistros enquanto se aproximam da verdade por trás
+                    dos
+                    sonhos de Ethan. Eles cruzam com programas de inteligência artificial enlouquecidos, guardiões
+                    virtuais
+                    e megacorporações implacáveis que farão de tudo para manter seus segredos enterrados nas profundezas
+                    da
+                    rede.
+
+                    Mas, à medida que a jornada avança, as fronteiras entre realidade e ilusão começam a se distorcer.
+                    Ethan
+                    começa a questionar sua própria sanidade enquanto os limites entre os sonhos e a vigília se tornam
+                    cada
+                    vez mais tênues.
+
+                    Finalmente, eles chegam ao epicentro do mistério, onde Ethan espera encontrar a garota de seus
+                    sonhos e
+                    resgatá-la do perigo iminente. Mas quando eles alcançam o ponto final de sua busca, o que eles
+                    descobrem
+                    é algo além da compreensão.
+
+                    A garota dos sonhos não passa de uma projeção de sua própria mente, uma manifestação de sua
+                    necessidade
+                    desesperada de escapar da monotonia de sua vida cotidiana. Os personagens que ele conheceu ao longo
+                    de
+                    sua jornada não são mais do que fragmentos de sua própria imaginação, reflexos distorcidos de suas
+                    próprias esperanças e medos.
+
+                    Desiludido e confuso, Ethan se vê de volta ao mundo real, questionando a natureza de sua própria
+                    existência. Ele percebe que, às vezes, os maiores mistérios residem dentro de nós mesmos, e que a
+                    verdadeira aventura é aquela que nos leva ao cerne de quem realmente somos.
+                </p>
+            </div>
+            
+
+        </div>
+    </section>
+    <section section id="secao2" class="section2">
+        
+        <div class="center">
+            <div class="conteudo font2" id="pagina10">
+                <p style="color: rgb(214, 250, 232);"><br>No coração de uma metrópole futurista, onde a luz das torres
+                    corporativas rivaliza com a escuridão das vielas sujas e os sons da tecnologia ecoam pelas ruas
+                    estreitas, reside um jovem chamado Ethan. Ele é um hacker talentoso, cuja mente é um labirinto de
+                    circuitos digitais e algoritmos complexos.
+
+                    Cada manhã, Ethan acorda com o mesmo sonho perturbador: uma garota misteriosa, com olhos tão
+                    profundos
+                    quanto o cosmos, sussurra seu nome em meio à estática da realidade virtual. Ela está em perigo,
+                    presa em
+                    um labirinto digital de segredos obscuros.
+
+                    Determinado a desvendar o mistério por trás desses sonhos, Ethan mergulha em uma jornada através das
+                    ruas cibernéticas da cidade. Ele encontra aliados improváveis ao longo do caminho, cada um com suas
+                    próprias motivações e segredos.
+
+                    Um deles é Ada, uma hacker renegada com uma mente afiada e uma história de fugas das garras das
+                    megacorporações. Ela guia Ethan pelos becos sombrios do submundo digital, onde a verdade é tão
+                    evasiva
+                    quanto um holograma.
+
+                    Outro é Zen, um ciborgue taciturno cujo corpo é uma mistura de carne e circuitos. Ele é um
+                    mercenário
+                    endurecido, mas sua lealdade é tão volátil quanto o código que ele quebra. Ethan sabe que não pode
+                    confiar totalmente nele, mas precisa de sua força para enfrentar os perigos que espreitam nas
+                    sombras
+                    digitais.
+
+                    Juntos, o trio enfrenta obstáculos cada vez mais sinistros enquanto se aproximam da verdade por trás
+                    dos
+                    sonhos de Ethan. Eles cruzam com programas de inteligência artificial enlouquecidos, guardiões
+                    virtuais
+                    e megacorporações implacáveis que farão de tudo para manter seus segredos enterrados nas profundezas
+                    da
+                    rede.
+
+                    Mas, à medida que a jornada avança, as fronteiras entre realidade e ilusão começam a se distorcer.
+                    Ethan
+                    começa a questionar sua própria sanidade enquanto os limites entre os sonhos e a vigília se tornam
+                    cada
+                    vez mais tênues.
+
+                    Finalmente, eles chegam ao epicentro do mistério, onde Ethan espera encontrar a garota de seus
+                    sonhos e
+                    resgatá-la do perigo iminente. Mas quando eles alcançam o ponto final de sua busca, o que eles
+                    descobrem
+                    é algo além da compreensão.
+
+                    A garota dos sonhos não passa de uma projeção de sua própria mente, uma manifestação de sua
+                    necessidade
+                    desesperada de escapar da monotonia de sua vida cotidiana. Os personagens que ele conheceu ao longo
+                    de
+                    sua jornada não são mais do que fragmentos de sua própria imaginação, reflexos distorcidos de suas
+                    próprias esperanças e medos.
+
+                    Desiludido e confuso, Ethan se vê de volta ao mundo real, questionando a natureza de sua própria
+                    existência. Ele percebe que, às vezes, os maiores mistérios residem dentro de nós mesmos, e que a
+                    verdadeira aventura é aquela que nos leva ao cerne de quem realmente somos.
+                </p>
+            </div>
+            
+
+        </div>
+    </section>
+
 
 
     <script>
         window.addEventListener('scroll', function () {
+
             var divComImagem = document.getElementById('divComImagem');
             var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            var elemento = document.getElementById("troca");
+            var elemento1 = document.getElementById("pagina1");
+            var elemento2 = document.getElementById("pagina2");
+            var elemento3 = document.getElementById("pagina3");
+            var elemento4 = document.getElementById("pagina4");
+            var elemento5 = document.getElementById("pagina5");
+            var elemento6 = document.getElementById("pagina6");
+            var elemento7 = document.getElementById("pagina7");
+            var elemento8 = document.getElementById("pagina8");
+            var elemento9 = document.getElementById("pagina9");
+            var elemento10 = document.getElementById("pagina10");
 
-            if (scrollTop > 255) { // Se o scroll for maior que 100 pixels
+            var back1 = document.getElementById("secao2")
+
+            if (scrollTop > 300) {
+                
                 divComImagem.style.position = 'fixed'; // Fixa a posição da div no topo
                 divComImagem.style.top = '50px'; // Coloca a div 50px abaixo do topo da tela
-            } else {
+                elemento.className = "imagem2";
+                
+                
+            }
+             else {
+                
                 divComImagem.style.position = 'absolute'; // Restaura a posição absoluta da div
                 divComImagem.style.top = '50%'; // Mantém a div centralizada verticalmente
+                elemento.className = "imagem";
+                
+             }
+             if (scrollTop > 600) {
+                
+                elemento1.classList.add("executado");
+                back1.classList.add("executado")
+
+                
+                
             }
+             else {
+                
+                elemento1.classList.remove("executado");
+                back1.classList.remove("executado");
+                
+
+                
+             }
+             if (scrollTop > 900) {
+                
+                elemento2.classList.add("executado");
+                divComImagem.style.display = 'none'; 
+                
+                
+            }
+             else {
+                
+                elemento2.classList.remove("executado");
+                divComImagem.style.display = 'block'; 
+                
+             }
+             if (scrollTop > 765) {
+                
+                elemento3.classList.add("executado");
+                
+                
+            }
+             else {
+                
+                elemento3.classList.remove("executado");
+                
+             }
+             if (scrollTop > 1020) {
+                
+                elemento4.classList.add("executado");
+                
+                
+            }
+             else {
+                
+                elemento4.classList.remove("executado");
+                
+             }
+             if (scrollTop > 1275) {
+                
+                elemento5.classList.add("executado");
+                
+                
+            }
+             else {
+                
+                elemento5.classList.remove("executado");
+                
+             }
+             if (scrollTop > 1530) {
+                
+                elemento6.classList.add("executado");
+                
+                
+            }
+             else {
+                
+                elemento6.classList.remove("executado");
+                
+             }
+             if (scrollTop > 1785) {
+                
+                elemento7.classList.add("executado");
+                
+                
+            }
+             else {
+                
+                elemento7.classList.remove("executado");
+                
+             }
+             if (scrollTop > 2040) {
+                
+                elemento8.classList.add("executado");
+                
+                
+            }
+             else {
+                
+                elemento8.classList.remove("executado");
+                
+             }
+             if (scrollTop > 2295) {
+                
+                elemento9.classList.add("executado");
+                
+                
+            }
+             else {
+                
+                elemento9.classList.remove("executado");
+                
+             }
+             if (scrollTop > 2550) {
+                
+                elemento10.classList.add("executado");
+                
+                
+            }
+             else {
+                
+                elemento10.classList.remove("executado");
+                
+             }
+              
         });
         // Função para lidar com o evento de rolagem do mouse
         function handleScroll(event) {
