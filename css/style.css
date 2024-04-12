@@ -146,6 +146,7 @@ section {
     /* Remover margem */
     padding: 0;
     /* Remover preenchimento */
+    overflow: hidden;
 }
 
 .section1 {
@@ -325,6 +326,187 @@ section {
 }
 
 .section5.executado {
+    background-image: url("https://cubiq.ru/wp-content/uploads/2019/07/cyberpunk.jpg");
+    background-repeat: no-repeat;
+    background-color: #000000;
+    background-size: 100%;
+    background-position: 0px, 300px;
+
+    animation: back1 4s forwards;
+}
+
+@keyframes back1 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.section6 {
+    background-image: url("https://wallpapercave.com/wp/wp12549833.png");
+    background-repeat: no-repeat;
+    background-color: #000000;
+    background-size: 100%;
+    opacity: 0%;
+    background-position: 0px, 300px;
+}
+
+.section6.executado {
+    background-image: url("https://sm.ign.com/ign_br/screenshot/default/cyberpunk2077-the-market-rgb_qtfg.png");
+    background-repeat: no-repeat;
+    background-color: #000000;
+    background-size: 100%;
+    background-position: 0px, 300px;
+
+    animation: back1 4s forwards;
+}
+
+@keyframes back1 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.section7 {
+    background-image: url("https://wallpapercave.com/wp/wp12549833.png");
+    background-repeat: no-repeat;
+    background-color: #000000;
+    background-size: 100%;
+    opacity: 0%;
+    background-position: 0px, 300px;
+}
+
+.section7.executado {
+    background-image: url("https://i.etsystatic.com/41045176/r/il/8d0fc8/4701353088/il_fullxfull.4701353088_ocrz.jpg");
+    background-repeat: no-repeat;
+    background-color: #000000;
+    background-size: 100%;
+    background-position: 0px, 300px;
+
+    animation: back1 4s forwards;
+}
+
+@keyframes back1 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.section8 {
+    background-repeat: no-repeat;
+    background-color: #000000;
+    background-size: 100%;
+    opacity: 0%;
+    background-position: 0px, 300px;
+}
+
+.section8.executado {
+    background-repeat: no-repeat;
+    background-color: #000000;
+    background-size: 100%;
+    background-position: 0px, 300px;
+
+    animation: back1 4s forwards;
+}
+
+@keyframes back1 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+.img-escondido {
+    position: absolute;
+    opacity: 0;
+    
+    
+
+}
+.img-escondido.executado {
+    position: absolute; 
+    opacity: 0;
+    animation: palhaçoPisca 0.25s infinite 6s, palhaçoSumir 1.8s 7.2s forwards;
+    
+
+}
+@keyframes palhaçoPisca {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes palhaçoSumir {
+    0% { opacity: 1; } 
+    100% { opacity: 0; }
+    }
+
+.section9 {
+    background-image: url("https://wallpapercave.com/wp/wp12549833.png");
+    background-repeat: no-repeat;
+    background-color: #000000;
+    background-size: 100%;
+    opacity: 0%;
+    background-position: 0px, 300px;
+}
+
+.section9.executado {
+    background-image: url("https://img.freepik.com/fotos-premium/reflexoes-encapsuladas-mulher-presa-em-tanque-cyberpunk-transparente_869640-1017.jpg");
+    background-repeat: no-repeat;
+    background-color: #000000;
+    background-size: 100%;
+    background-position: 0px, 300px;
+    overflow: hidden;
+
+    animation: back1 4s forwards;
+}
+.imagem-blur {
+    position: absolute;
+    width: 1300px; /* Defina a largura da imagem */
+    height: 1300px; /* Defina a altura da imagem */
+    background-image: url('https://img.freepik.com/fotos-premium/reflexoes-encapsuladas-mulher-presa-em-tanque-cyberpunk-transparente_869640-1017.jpg'); /* Substitua 'sua_imagem.jpg' pelo caminho da sua imagem */
+    background-size: cover;
+    filter: blur(4px); /* Altere o valor de 'blur' conforme necessário */
+  }
+
+@keyframes back1 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.section10 {
+    background-image: url("https://wallpapercave.com/wp/wp12549833.png");
+    background-repeat: no-repeat;
+    background-color: #000000;
+    background-size: 100%;
+    opacity: 0%;
+    background-position: 0px, 300px;
+}
+
+.section10.executado {
     background-image: url("https://wallpapercave.com/wp/wp12549833.png");
     background-repeat: no-repeat;
     background-color: #000000;
@@ -344,7 +526,7 @@ section {
     }
 }
 
-.section2 {
+.section11 {
     background-image: url("https://wallpapercave.com/wp/wp12549833.png");
     background-repeat: no-repeat;
     background-color: #000000;
@@ -353,152 +535,7 @@ section {
     background-position: 0px, 300px;
 }
 
-.section2.executado {
-    background-image: url("https://wallpapercave.com/wp/wp12549833.png");
-    background-repeat: no-repeat;
-    background-color: #000000;
-    background-size: 100%;
-    background-position: 0px, 300px;
-
-    animation: back1 4s forwards;
-}
-
-@keyframes back1 {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.section2 {
-    background-image: url("https://wallpapercave.com/wp/wp12549833.png");
-    background-repeat: no-repeat;
-    background-color: #000000;
-    background-size: 100%;
-    opacity: 0%;
-    background-position: 0px, 300px;
-}
-
-.section2.executado {
-    background-image: url("https://wallpapercave.com/wp/wp12549833.png");
-    background-repeat: no-repeat;
-    background-color: #000000;
-    background-size: 100%;
-    background-position: 0px, 300px;
-
-    animation: back1 4s forwards;
-}
-
-@keyframes back1 {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.section2 {
-    background-image: url("https://wallpapercave.com/wp/wp12549833.png");
-    background-repeat: no-repeat;
-    background-color: #000000;
-    background-size: 100%;
-    opacity: 0%;
-    background-position: 0px, 300px;
-}
-
-.section2.executado {
-    background-image: url("https://wallpapercave.com/wp/wp12549833.png");
-    background-repeat: no-repeat;
-    background-color: #000000;
-    background-size: 100%;
-    background-position: 0px, 300px;
-
-    animation: back1 4s forwards;
-}
-
-@keyframes back1 {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.section2 {
-    background-image: url("https://wallpapercave.com/wp/wp12549833.png");
-    background-repeat: no-repeat;
-    background-color: #000000;
-    background-size: 100%;
-    opacity: 0%;
-    background-position: 0px, 300px;
-}
-
-.section2.executado {
-    background-image: url("https://wallpapercave.com/wp/wp12549833.png");
-    background-repeat: no-repeat;
-    background-color: #000000;
-    background-size: 100%;
-    background-position: 0px, 300px;
-
-    animation: back1 4s forwards;
-}
-
-@keyframes back1 {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.section2 {
-    background-image: url("https://wallpapercave.com/wp/wp12549833.png");
-    background-repeat: no-repeat;
-    background-color: #000000;
-    background-size: 100%;
-    opacity: 0%;
-    background-position: 0px, 300px;
-}
-
-.section2.executado {
-    background-image: url("https://wallpapercave.com/wp/wp12549833.png");
-    background-repeat: no-repeat;
-    background-color: #000000;
-    background-size: 100%;
-    background-position: 0px, 300px;
-
-    animation: back1 4s forwards;
-}
-
-@keyframes back1 {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.section2 {
-    background-image: url("https://wallpapercave.com/wp/wp12549833.png");
-    background-repeat: no-repeat;
-    background-color: #000000;
-    background-size: 100%;
-    opacity: 0%;
-    background-position: 0px, 300px;
-}
-
-.section2.executado {
+.section11.executado {
     background-image: url("https://wallpapercave.com/wp/wp12549833.png");
     background-repeat: no-repeat;
     background-color: #000000;
@@ -519,6 +556,8 @@ section {
 }
 
 .center {
+    position: absolute;
+
     text-align: justify;
     width: 50%;
     margin: 0;
@@ -532,6 +571,16 @@ section {
     text-align: justify;
     width: 40%;
     margin: 20%;
+}
+.center4 {
+    left: 10%;
+    text-align: justify;
+    margin: 0;
+}
+.center5 {
+    right: 30%;
+    text-align: justify;
+    margin: 0;
 }
 
 .h1 {
@@ -622,21 +671,26 @@ section {
     padding-top: 0px;
     display: inline-block;
     background-color: rgba(0, 0, 0, 0.7);
-    /* Cor de fundo com opacidade */
     padding: 0px 10px;
     border-radius: 10px;
-    display: none;
 
+}
+.conteudo2 {
+    padding-top: 0px;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0px 10px;
+    border-radius: 10px;
+
+    animation: aparecer1 1.5s forwards;
 }
 
 .conteudo.executado {
     padding-top: 1px;
     display: inline-block;
     background-color: rgba(0, 0, 0, 0.7);
-    /* Cor de fundo com opacidade */
     padding: 1px 10px;
     border-radius: 10px;
-    
 
     animation: aparecer1 1.5s forwards;
 
@@ -653,8 +707,41 @@ section {
     animation: aparecer2 1.5s forwards;
 
 }
+.conteudo.executado3 {
+    padding-top: 1px;
+    display: inline-block;
+    background-color: rgba(190, 43, 170, 0.74);
+    /* Cor de fundo com opacidade */
+    padding: 1px 10px;
+    border-radius: 10px;
+    
 
+    animation: aparecer2 1.5s forwards;
 
+}
+.conteudo.executado4 {
+    padding-top: 1px;
+    display: inline-block;
+    background-color: rgba(236, 91, 24, 0.74);
+    /* Cor de fundo com opacidade */
+    padding: 1px 10px;
+    border-radius: 10px;
+    
+
+    animation: aparecer3 1.5s forwards;
+
+}
+.conteudo.executado5 {
+    padding-top: 1px;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1px 10px;
+    border-radius: 10px;
+    width: 20%;
+
+    animation: aparecer1 1.5s forwards;
+
+}
 
 @keyframes aparecer1 {
     from {
@@ -674,7 +761,18 @@ section {
     }
 
     to {
-        transform: translateX(-60%);
+        transform: translateX(-40%);
+        opacity: 1;
+    }
+}
+@keyframes aparecer3 {
+    from {
+        transform: translateX(10%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(40%);
         opacity: 1;
     }
 }
@@ -743,7 +841,35 @@ section {
     opacity: 0.13;
 }
 .imagemAda{
-    position: absolute;
-    transform: scale(3);
-    bottom: 10%;
+    transform: scale(0.39);
+    bottom: -1.5%;
+    right: -25%;
+    position: relative;
+}
+.quadrado-branco {
+    width: 483px;
+  height: 594px;
+  background-color: white;
+  position: absolute;
+  left: 696px;
+  border-radius: 20px;
+
+  z-index: 0;
+}
+.imagemZen{
+    transform: scale(0.4);
+    bottom: -1%;
+    right: 27%;
+    transform: rotateY(200deg);
+    position: relative;
+}
+.quadrado-branco2 {
+    width: 483px;
+  height: 594px;
+  background-color: white;
+  position: absolute;
+  right: 696px;
+  border-radius: 20px;
+
+  z-index: -1;
 }

@@ -5,38 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rolagem Suave com Scroll do Mouse</title>
     <style>
-    .cosmos {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-      }
-      
-      .stars {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(white 0.5%, transparent 0.5%);
-        background-size: 2px 2px;
-        pointer-events: none;
-        animation: animateStars 50s linear infinite;
-      }
-      
-      @keyframes animateStars {
-        from {
-          transform: translateY(0);
-        }
-        to {
-          transform: translateY(-100%);
-        }
-      }
+    .glitch-container {
+  position: relative;
+  width: 300px;
+  height: 100px;
+  overflow: hidden;
+  background-color: black;
+}
+
+.glitch-text {
+  font-size: 24px;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.glitch-text::before {
+  animation: glitch-animation 1s infinite;
+}
+
+.glitch-text::after {
+  animation: glitch-animation-2 1s infinite;
+}
+
+@keyframes glitch-animation {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(-5px, 5px);
+  }
+  50% {
+    transform: translate(5px, -5px);
+  }
+  75% {
+    transform: translate(-5px, 5px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes glitch-animation-2 {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(5px, -5px);
+  }
+  50% {
+    transform: translate(-5px, 5px);
+  }
+  75% {
+    transform: translate(5px, -5px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
     </style>
 
 </head>
 <body>
-    <div class="cosmos">
-        <div class="stars"></div>
-      </div>
+  
+  <div class="glitch-container">
+    <p class="glitch-text">Texto com efeito de glitch</p>
+  </div>
       
 </body>
 </html>

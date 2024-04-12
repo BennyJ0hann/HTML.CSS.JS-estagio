@@ -10,6 +10,7 @@ window.addEventListener('scroll', function () {
     var elemento4 = document.getElementById("pagina4");
     var elemento5 = document.getElementById("pagina5");
     var elemento6 = document.getElementById("pagina6");
+    var elemento6_2 = document.getElementById("pagina6.2");
     var elemento7 = document.getElementById("pagina7");
     var elemento8 = document.getElementById("pagina8");
     var elemento9 = document.getElementById("pagina9");
@@ -29,6 +30,8 @@ window.addEventListener('scroll', function () {
     var ethan = document.getElementById("ethan");
     var ethan2 = document.getElementById("ethan2");
     var ethan3 = document.getElementById("ethan3");
+
+    var palhaco = document.getElementById("palhaco")
 
 
 
@@ -120,42 +123,46 @@ window.addEventListener('scroll', function () {
     // pag4
     if (scrollPercentage > 30) {
 
-        elemento4.classList.add("executado");
+        elemento4.classList.add("executado3");
         back4.classList.add("executado")
 
 
     }
     else {
 
-        elemento4.classList.remove("executado");
+        elemento4.classList.remove("executado3");
         back4.classList.remove("executado");
 
     }
     // pag5
     if (scrollPercentage > 40) {
 
-        elemento5.classList.add("executado");
+        elemento5.classList.add("executado4");
         back5.classList.add("executado")
 
 
     }
     else {
 
-        elemento5.classList.remove("executado");
+        elemento5.classList.remove("executado4");
         back5.classList.remove("executado");
 
     }
     // pag6
     if (scrollPercentage > 50) {
 
-        elemento6.classList.add("executado");
+        elemento6.classList.add("executado5");
+        elemento6_2.classList.add("executado5");
+
         back6.classList.add("executado")
 
 
     }
     else {
 
-        elemento6.classList.remove("executado");
+        elemento6.classList.remove("executado5");
+        elemento6_2.classList.remove("executado5");
+
         back6.classList.remove("executado");
 
     }
@@ -164,6 +171,8 @@ window.addEventListener('scroll', function () {
 
         elemento7.classList.add("executado");
         back7.classList.add("executado")
+        palhaco.classList.add("executado");
+
 
 
     }
@@ -171,6 +180,8 @@ window.addEventListener('scroll', function () {
 
         elemento7.classList.remove("executado");
         back7.classList.remove("executado");
+        palhaco.classList.remove("executado");
+        
 
     }
     // pag8
