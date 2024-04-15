@@ -33,6 +33,12 @@ window.addEventListener('scroll', function () {
 
     var palhaco = document.getElementById("palhaco")
 
+    var imagem = document.querySelector('.imagemsec10');
+
+    var tvP = document.getElementById("tvP");
+    var tv = document.getElementById("tv");
+
+
 
 
     var scrollHeight = Math.max(
@@ -201,33 +207,49 @@ window.addEventListener('scroll', function () {
     // pag9
     if (scrollPercentage > 80) {
 
-        elemento9.classList.add("executado");
-        back9.classList.add("executado")
+        elemento9.classList.add("executado6");
+        back9.classList.add("executado");
+        imagem.classList.add('zoom-out');
+
 
 
     }
     else {
 
-        elemento9.classList.remove("executado");
+        elemento9.classList.remove("executado6");
         back9.classList.remove("executado");
+        imagem.classList.remove('zoom-out');
 
     }
     // pag10
     if (scrollPercentage > 90) {
 
-        elemento10.classList.add("executado");
+        elemento10.classList.add("executado7");
         back10.classList.add("executado")
+        setTimeout(function(){
+            tvP.classList.add("executa")
+        },16000)
+        
+
+        
+        setTimeout(function(){
+            tv.classList.add("executa");
+        },15000)
 
 
     }
     else {
 
-        elemento10.classList.remove("executado");
+        elemento10.classList.remove("executado7");
         back10.classList.remove("executado");
+        tvP.classList.remove("executa")
 
+
+        tv.classList.remove("executa");
     }
 
 });
+
 // Função para lidar com o evento de rolagem do mouse
 function handleScroll(event) {
     const delta = event.deltaY; // Obtém a quantidade de rolagem do scroll

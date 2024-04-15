@@ -1,87 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rolagem Suave com Scroll do Mouse</title>
-    <style>
-    .glitch-container {
-  position: relative;
-  width: 300px;
-  height: 100px;
-  overflow: hidden;
-  background-color: black;
-}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exibir imagem após 5 segundos</title>
+<style>
+    .imagem {
+      position: absolute;
+        opacity: 0;
+        animation: aparecer 0.1s 5s forwards; /* Iniciar a animação após 5 segundos */
+    }
 
-.glitch-text {
-  font-size: 24px;
-  color: white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.glitch-text::before,
-.glitch-text::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.glitch-text::before {
-  animation: glitch-animation 1s infinite;
-}
-
-.glitch-text::after {
-  animation: glitch-animation-2 1s infinite;
-}
-
-@keyframes glitch-animation {
-  0% {
-    transform: translate(0);
-  }
-  25% {
-    transform: translate(-5px, 5px);
-  }
-  50% {
-    transform: translate(5px, -5px);
-  }
-  75% {
-    transform: translate(-5px, 5px);
-  }
-  100% {
-    transform: translate(0);
-  }
-}
-
-@keyframes glitch-animation-2 {
-  0% {
-    transform: translate(0);
-  }
-  25% {
-    transform: translate(5px, -5px);
-  }
-  50% {
-    transform: translate(-5px, 5px);
-  }
-  75% {
-    transform: translate(5px, -5px);
-  }
-  100% {
-    transform: translate(0);
-  }
-}
-    </style>
-
+    @keyframes aparecer {
+        to {
+            opacity: 100%; /* Exibir a imagem ao final da animação */
+        }
+    }
+</style>
 </head>
 <body>
-  
-  <div class="glitch-container">
-    <p class="glitch-text">Texto com efeito de glitch</p>
-  </div>
-      
+
+<img src="https://i.pinimg.com/originals/80/5d/5f/805d5fbc1b0370a1258009be3a32f1c5.gif" class="imagem" alt="Sua imagem">
+
 </body>
 </html>

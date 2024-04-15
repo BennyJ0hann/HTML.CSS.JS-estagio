@@ -138,14 +138,11 @@ body {
 
 section {
     height: 100vh;
-    /* Altura de 100% da altura da janela do navegador */
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
-    /* Remover margem */
     padding: 0;
-    /* Remover preenchimento */
     overflow: hidden;
 }
 
@@ -466,6 +463,7 @@ section {
     background-size: 100%;
     opacity: 0%;
     background-position: 0px, 300px;
+    overflow: hidden;
 }
 
 .section9.executado {
@@ -479,7 +477,6 @@ section {
     animation: back1 4s forwards;
 }
 .imagem-blur {
-    position: absolute;
     width: 1300px; /* Defina a largura da imagem */
     height: 1300px; /* Defina a altura da imagem */
     background-image: url('https://img.freepik.com/fotos-premium/reflexoes-encapsuladas-mulher-presa-em-tanque-cyberpunk-transparente_869640-1017.jpg'); /* Substitua 'sua_imagem.jpg' pelo caminho da sua imagem */
@@ -507,8 +504,6 @@ section {
 }
 
 .section10.executado {
-    background-image: url("https://wallpapercave.com/wp/wp12549833.png");
-    background-repeat: no-repeat;
     background-color: #000000;
     background-size: 100%;
     background-position: 0px, 300px;
@@ -524,6 +519,19 @@ section {
     to {
         opacity: 1;
     }
+}
+.container {
+    position: relative;
+    left: 0%;
+}
+.imagemsec10 {
+    width: 100%; 
+    transform: scale(3) translate(20%, 5%);
+    transition: transform 19s ease; /* animação suave ao aplicar o zoom */
+}
+.zoom-out {
+    transform: scale(1) translate(0,0); /* aplicar um zoom out de 20% */  
+    
 }
 
 .section11 {
@@ -536,7 +544,7 @@ section {
 }
 
 .section11.executado {
-    background-image: url("https://wallpapercave.com/wp/wp12549833.png");
+    background-image: url("https://i.pinimg.com/originals/cc/ed/3b/cced3b7dc99f07b91601887c6133a99c.jpg");
     background-repeat: no-repeat;
     background-color: #000000;
     background-size: 100%;
@@ -554,6 +562,69 @@ section {
         opacity: 1;
     }
 }
+.tv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+    background-image: url("https://i.pinimg.com/originals/80/5d/5f/805d5fbc1b0370a1258009be3a32f1c5.gif");
+    background-size: cover; 
+    z-index: 999;
+}
+.tv.executa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+    background-image: url("https://i.pinimg.com/originals/80/5d/5f/805d5fbc1b0370a1258009be3a32f1c5.gif");
+    background-size: cover; 
+    animation: tv 0.1s forwards;
+    z-index: 999;
+}
+@keyframes tv {
+    to{
+        opacity: 100%;
+    }
+    
+}
+
+.tvP {
+    
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+    background-size: cover; 
+
+    z-index: 1000;
+}
+.tvP.executa {
+    
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+    background-size: cover; 
+
+     animation: telaP 0.01s forwards;
+    z-index: 1000;
+}
+@keyframes telaP {
+    to{
+        opacity: 100%;
+    }
+}
+
 
 .center {
     position: absolute;
@@ -740,6 +811,30 @@ section {
     width: 20%;
 
     animation: aparecer1 1.5s forwards;
+
+}
+.conteudo.executado6 {
+    padding-top: 1px;
+    display: inline-block;
+    background-color: rgba(43, 65, 2, 0.74);
+    /* Cor de fundo com opacidade */
+    padding: 1px 10px;
+    border-radius: 10px;
+    
+
+    animation: aparecer3 1.5s forwards;
+
+}
+.conteudo.executado7 {
+    padding-top: 1px;
+    display: inline-block;
+    background-color: rgba(100, 76, 97, 0.74);
+    /* Cor de fundo com opacidade */
+    padding: 1px 10px;
+    border-radius: 10px;
+    
+
+    animation: aparecer2 2s forwards;
 
 }
 
