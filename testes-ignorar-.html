@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Exibir imagem após 5 segundos</title>
-<style>
-    .imagem {
-      position: absolute;
-        opacity: 0;
-        animation: aparecer 0.1s 5s forwards; /* Iniciar a animação após 5 segundos */
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo</title>
+  <style>
+    .container {
+      width: 400px; /* Largura do container */
+      height: 300px; /* Altura do container */
+      overflow: hidden; /* Para ocultar o conteúdo que ultrapassa as dimensões do contêiner */
+      border: 1px solid #000; /* Adicione uma borda para visualização */
     }
-
-    @keyframes aparecer {
-        to {
-            opacity: 100%; /* Exibir a imagem ao final da animação */
-        }
+    
+    .container img {
+      width: 140%; /* Garante que a imagem preencha todo o espaço disponível dentro do contêiner */
+      height: auto; /* Mantém a proporção da imagem */
+      display: block; /* Remove espaços extras abaixo da imagem */
     }
-</style>
+  </style>
 </head>
 <body>
-
-<img src="https://i.pinimg.com/originals/80/5d/5f/805d5fbc1b0370a1258009be3a32f1c5.gif" class="imagem" alt="Sua imagem">
-
+  <div class="container">
+    <img src="https://uploads.metropoles.com/wp-content/uploads/2019/11/25162330/Shrek1-600x400.jpg" alt="Imagem 1">
+    <!-- Adicione mais imagens conforme necessário -->
+  </div>
 </body>
 </html>

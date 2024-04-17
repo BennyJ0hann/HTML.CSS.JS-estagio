@@ -18,12 +18,44 @@ h1 {
     padding: 10px 20px;
     text-align: center;
     display: inline-block;
+    position: absolute;
+    z-index: 1;
+    top: 50px; 
+      left: 35%;
+    font-size: 20px;
+}
+.dead{
+  background-color: #df302a;
+  color: white;
+  font-size: 10%;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  top: 50px; 
+    left: 33%;
+  font-size: 20px;
+}
+.deadJoffrey{
+  background-color: #38dd38;
+  color: white;
+  font-size: 10%;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  top: 50px; 
+    left: 27%;
+  font-size: 20px;
 }
 
 
 
 
 .cards {
+  position: relative;
     width: 20%;
     border: 1px solid black;
     background-color: rgb(107, 107, 107);
@@ -35,9 +67,11 @@ h1 {
 }
 .container {
     position: relative;
-    width: 100%;
+    width: 250px;
+    height: 350px; 
+    overflow: hidden; /* Para ocultar o conteúdo que ultrapassa as dimensões do contêiner */
+
     cursor: pointer; /* Adiciona o cursor de clique */
-    display: inline-block; /* Para permitir o ajuste do tamanho */
     border: none; /* Remove a borda */
     border-radius: 5px; /* Borda arredondada */
     text-align: center; /* Centraliza o texto */
@@ -48,6 +82,78 @@ h1 {
     display: block;
     width: 100%;
     height: auto;
+  }
+  .image_1 {
+    display: block;
+  width: 211%;
+  height: auto;
+  left: -66%;
+  position: absolute;
+  top: 0%;
+  }
+  .image_2 {
+    display: block;
+  width: 100%;
+  height: auto;
+  left: 0%;
+  position: absolute;
+  top: 0%;
+  }
+  .image_3 {
+    display: block;
+  width: 211%;
+  height: auto;
+  left: -66%;
+  position: absolute;
+  top: 0%;
+  }
+  .image_4 {
+    display: block;
+  width: 144%;
+  height: auto;
+  left: -18%;
+  position: absolute;
+  top: 0%;
+  }
+  .image_5 {
+    display: block;
+  width: 101%;
+  height: auto;
+  left: -1%;
+  position: absolute;
+  top: 0%;
+  }
+  .image_6 {
+    display: block;
+  width: 101%;
+  height: auto;
+  left: -1%;
+  position: absolute;
+  top: -17%;
+  }
+  .image_7 {
+    display: block;
+  width: 85%;
+  height: auto;
+  left: 8%;
+  position: absolute;
+  top: 6%;
+  }
+  .image_8 {
+    display: block;
+  width: 131%;
+  height: auto;
+  left: -20%;
+  position: absolute;
+  top: 0%;
+  }
+  .image_9 {
+    display: block;
+  width: 249%;
+  height: auto;
+  left: -61%;
+  position: absolute;
+  top: 0%;
   }
   .overlay {
     position: absolute;
