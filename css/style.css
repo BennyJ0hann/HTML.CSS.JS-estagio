@@ -10,7 +10,19 @@ h1 {
 }
 
 
-
+.Desconhecido{
+  background-color: #a3a3a3;
+  color: white;
+  font-size: 10%;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  top: 50px; 
+    left: 20%;
+  font-size: 20px;
+}
 .life{
     background-color: #36f45f;
     color: white;
@@ -147,6 +159,7 @@ h1 {
   position: absolute;
   top: 0%;
   }
+  
   .image_9 {
     display: block;
   width: 249%;
@@ -154,6 +167,62 @@ h1 {
   left: -61%;
   position: absolute;
   top: 0%;
+  }
+  .image_10 {
+    display: block;
+  width: 190%;
+  height: auto;
+  left: -56%;
+  position: absolute;
+  top: 0%;
+  }
+  .image_11 {
+    display: block;
+  width: 113%;
+  height: auto;
+  left: -8%;
+  position: absolute;
+  top: 0%;
+  }
+  .image_12 {
+    display: block;
+    width: 237%;
+    height: auto;
+    left: -117%;
+    position: absolute;
+    top: -24%;
+  }
+  .image_13 {
+    display: block;
+  width: 99%;
+  height: auto;
+  left: -1%;
+  position: absolute;
+  top: 38%;
+  }
+  .image_14{
+    display: block;
+  width: 257%;
+  height: auto;
+  left: -28%;
+  position: absolute;
+  top: -3%;
+  }
+  .image_15{
+    display: block;
+  width: 199%;
+  height: auto;
+  left: -46%;
+  position: absolute;
+  top: -3%;
+  }
+  .image_16{
+    display: block;
+  width: 163%;
+  height: auto;
+  left: -63%;
+  position: absolute;
+  top: 9%;
   }
   .overlay {
     position: absolute;
