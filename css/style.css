@@ -1,3 +1,60 @@
+.background{
+  background: rgb(255, 255, 255);
+}
+.logoPagInicio{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 225px;
+  padding-top: 5%;
+}
+.logoPagInicio img{
+  transform: scale(0.5);
+
+}
+
+#botao {
+  padding: 10px 20px;
+  background-color: #007bff; 
+  color: #fff; 
+  border: none;
+  cursor: pointer;
+  border-radius: 2rem;
+}
+
+#botao:disabled {
+  opacity: 0.5; 
+  cursor: not-allowed; 
+}
+
+
+
+.logo{
+  position: absolute;
+  top: 1%;
+  left: 4%;
+}
+.logo img {
+  width: 15%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.logo img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.cabecalho{
+  position: absolute;
+  background-color: rgb(58, 91, 153);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 85px;
+  z-index: -1;
+}
+
+
 h1 {
     display: flex;
     justify-content: center;
@@ -6,6 +63,7 @@ h1 {
 .formatation ul {
     display: block ruby;
     justify-content: center;
+    padding-top: 10%;
 
 }
 
@@ -87,16 +145,14 @@ h1 {
 .cards {
   position: relative;
     width: 20%;
-    border: 1px solid black;
     background-color: rgb(255, 255, 255);
     flex: 1;
-    border: 1px solid rgb(116, 116, 116);
     padding: 5px 20px;
     text-align: center;
     border-style: initial ;
     border-radius: 0.8rem;
     height: 610px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 2px 4.5px rgba(0, 0, 0, 0.3);
 }
 .container {
     position: relative;
@@ -261,7 +317,7 @@ h1 {
     bottom: 100%;
     left: 0;
     right: 0;
-    background-color: #303030;
+    background-color: rgba(48, 48, 48, 0.9);
     overflow: hidden;
     width: 100%;
     height: 0%;
@@ -273,14 +329,27 @@ h1 {
   }
   .text {
     white-space: nowrap; 
-    color: black;
-    font-size: 20px;
+    color: rgb(255, 255, 255);
     position: absolute;
     overflow: hidden;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    top: 45%;
+    left: 35%;
+  }
+  .container:hover .text {
+    
+    
+    animation: fontBreath 2.7s infinite;
+  }
+  @keyframes fontBreath {
+    0%{
+      transform: scale(1.4);
+    }
+    50%{
+      transform: scale(1.6);
+    }
+    100%{
+      transform: scale(1.4);
+    }
   }
 
 
