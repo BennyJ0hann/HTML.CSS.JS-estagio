@@ -12,4 +12,4 @@ de aprendizado em Html e CSS no estágio feito no CRO (Conselho Regional de Odon
         Sombra_Digital: Um projeto feito em Html, CSS e JavaScript para contar uma história 
         em um universo cyberpunk.
 
-
+        Personagens:Um projeto feito para treinar paginação e html, css e javaScript, com intuito de mostrar personagens e um pouco de sua história.
