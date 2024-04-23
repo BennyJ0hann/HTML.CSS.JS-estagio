@@ -1,0 +1,60 @@
+.personagem {
+    width: 90px;
+    height: 110px;
+    background-image: url('https://media.tenor.com/rT_YJtN7ONEAAAAi/chun-li-walking-animation.gif');
+    position: absolute;
+    transform: scaleX(-1);
+  }
+  .personagem.esquerda {
+    width: 90px;
+    height: 110px;
+    background-image: url('https://media.tenor.com/rT_YJtN7ONEAAAAi/chun-li-walking-animation.gif');
+    position: absolute;
+    transform: scaleX(1);
+
+  }
+  .personagem.Parado {
+    width: 90px;
+    height: 100px;
+    background-image: url('/home/bennyjohann/benny/Git/Html/Projeto_3/parado.gif');
+
+    position: absolute;
+    transform: scaleX(1);
+
+  }
+  .personagem.Pular {
+    width: 90px;
+    height: 110px;
+    background-image: url('../pular2.gif');
+
+    position: absolute;
+    transform: scaleX(1);
+
+  }
+
+  
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .retangulo {
+    width: 50px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .pulo {
+    animation: jump 0.7s steps(100); ;
+  }
+  @keyframes jump {
+    0% { transform: translateY(0);}
+    60% { transform: translateY(-200px); }
+    100% { transform: translateY(0);}
+}
+  
