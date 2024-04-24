@@ -1,47 +1,64 @@
 const quadrado = document.getElementById('personagem');
 let posX = 0;
-let posY = 0;
-const step = 10;
+let posY = 32.5;
+const step = 2;
 
 var personagemMov = document.getElementById("personagem");
-
+const larguraDaTelaPixels = window.innerWidth; // Largura da tela em pixels
+const larguraDaTelaVW = (larguraDaTelaPixels / window.innerWidth) * 100;
+let moveInterval;
 
   function moveSquare(event) {
     switch(event.key) {
       case 'w':
+    // Verifica se a classe 'personagem.esquerda' está presente no elemento
+    if (personagemMov.classList.contains("esquerda")) {
+        // Se estiver presente, adiciona a classe 'Pular2'
+        personagemMov.classList.add("Pular2");
+        setTimeout(() => personagemMov.classList.remove('Pular2'), 990);
         quadrado.classList.add('pulo'); 
-        setTimeout(() => quadrado.classList.remove('pulo'), 800);
+        setTimeout(() => quadrado.classList.remove('pulo'), 990);
+
+    } else {
+        // Caso contrário, adiciona a classe 'Pular'
         personagemMov.classList.add("Pular");
-        setTimeout(() => personagemMov.classList.remove("Pular"), 700);
-
-
-        break;
+        setTimeout(() => personagemMov.classList.remove('Pular'), 990);
+    }
+    // Força o navegador a reavaliar o estilo, reiniciando a animação
+    void elemento.offsetWidth;
+    break;
       case 'a':
         posX -= step;
         personagemMov.classList.add("esquerda");
+        if (posX- step < -2) {
+          posX += step;
+      }
   
         break;
       case 's':
-        posY += step;
         
         break;
       case 'd':
         personagemMov.classList.remove("esquerda");
-  
         posX += step;
+        if (posX + step > larguraDaTelaVW - 4) {
+          posX -= step;
+      }
   
         break;
       default:
         return;
     }
-    quadrado.style.top = posY + 'px';
-    quadrado.style.left = posX + 'px';
+
+    
+    personagemMov.style.top = posY + 'vw';
+    personagemMov.style.left = posX + 'vw';
   }
 
 document.addEventListener('keydown', moveSquare);
 
 function changeSprite(event) {
-  if (event.key === 'w' || event.key === 'a' || event.key === 's' || event.key === 'd') {
+  if (event.key === 'w' || event.key === 'a'  || event.key === 'd') {
     personagemMov.classList.remove("Parado");
   }
 }
