@@ -4,6 +4,8 @@ let posY = 29.8;
 const step = 2;
 
 var funcaoJaAcionada = false;
+var funcaoJaAcionada2 = false;
+
 
 
 var personagemMov = document.getElementById("personagem");
@@ -82,6 +84,8 @@ function verificarPosicao() {
   var background = document.getElementById("background");
   var background2 = document.getElementById("background2");
   var background3 = document.getElementById("background3");
+  var background4 = document.getElementById("background4");
+
 
   var cor = document.getElementById('cor');
 
@@ -92,9 +96,11 @@ function verificarPosicao() {
   var terco = larguraJanela / 3;
 
   if (posicaoDiv < terco) {
-      background.className = 'background first';
-      background2.className = 'background first';
+      background.className = 'sol2';
+      background2.className = 'sol';
       background3.className = 'background first';
+      background4.className = 'cloud4';
+
       removerPingosDeAgua();
 
 
@@ -105,19 +111,26 @@ function verificarPosicao() {
       background3.className = 'cloud3';
       cor.className = 'background second';
 
-        adicionarPingosDeAgua()
+      background4.className = 'relampago';
+      setTimeout(() => background4.classList.add("flash"), 5000);
+      setTimeout(() => background4.classList.remove('flash'), 5500);
+      
+      adicionarPingosDeAgua()
+      removerEstrelas()
       
       } else {
-      background.className = 'background third';
-      background2.className = 'background third';
+      background.className = 'lua';
+      background2.className = 'background first';
       background3.className = 'background third';
       removerPingosDeAgua();
+
+      adicionarEstrelas()
+
+
 
   }
   
 }
-
-// Chama a função quando a página é carregada e redimensionada
 window.onload = window.onresize = verificarPosicao;
 
 
@@ -144,7 +157,7 @@ function adicionarPingosDeAgua() {
   var alturaNuvem3 = cloud3.offsetHeight;
 
   if (!funcaoJaAcionada) {
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 20; i++) {
       var raindrop = document.createElement('div');
       var raindrop2 = document.createElement('div');
       var raindrop3 = document.createElement('div');
@@ -179,12 +192,40 @@ function removerPingosDeAgua() {
     raindrop.parentNode.removeChild(raindrop);
   });
 
-  // Redefine a variável de controle
   funcaoJaAcionada = false;
 }
 
-// Chama a função para remover os pingos de água
 
 
+function adicionarEstrelas() {
+  var ceu = document.getElementById('background3');
+
+  var larguraTela2 = ceu.offsetWidth;
+  var alturaTela2 = ceu.offsetHeight;
 
 
+  if (!funcaoJaAcionada2) {
+    for (var i = 0; i < 20; i++) {
+      var estrela = document.createElement('div');
+      
+      estrela.className = 'estrela';
+      estrela.style.left = Math.random() * larguraTela2 + 'px';
+      estrela.style.top = Math.random() * alturaTela2 + 'px';
+
+      
+
+      ceu.appendChild(estrela);
+      
+
+  }
+    funcaoJaAcionada2 = true;
+}
+}
+function removerEstrelas() {
+  var estrelas = document.querySelectorAll('.estrela');
+  estrelas.forEach(function(estrela) {
+    estrela.parentNode.removeChild(estrela);
+  });
+
+  funcaoJaAcionada2 = false;
+}
