@@ -909,7 +909,7 @@ section {
 
 @font-face {
     font-family: 'cyberspace';
-    src: url('/home/bennyjohann/benny/Git/Html/cyberspace.ttf') format('truetype');
+    src: url('../cyberspace.ttf') format('truetype');
 }
 
 .font {
@@ -918,7 +918,7 @@ section {
 
 @font-face {
     font-family: 'NEO CYBERN';
-    src: url('/home/bennyjohann/benny/Git/Html/NEO CYBERN.otf') format('opentype');
+    src: url('../NEO CYBERN.otf') format('opentype');
 }
 
 .font2 {
