@@ -364,20 +364,56 @@ body {
 }
 .estrela {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  width: 4px;
+  height: 4px;
   background-color: #fff;
   border-radius: 35%;
   z-index: -1;
-  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
-  animation: brilho 0.3s linear infinite;
+  box-shadow: 0 0 5px 5px rgb(255, 255, 255);
+  animation: brilho 1s linear infinite;
 }
 @keyframes brilho {
   0%,100%{
-    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px 1px rgb(255, 255, 255);
   }
   50%{
-    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px 3px rgb(255, 255, 255);
+  }
+}
+.estrela2 {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 35%;
+  z-index: -1;
+  box-shadow: 0 0 5px 5px rgb(255, 255, 255);
+  animation: brilho2 1s linear infinite;
+}
+@keyframes brilho2 {
+  25%,125%{
+    box-shadow: 0 0 3px 1px rgb(255, 255, 255);
+  }
+  75%{
+    box-shadow: 0 0 3px 3px rgb(255, 255, 255);
+  }
+}
+.estrela3 {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 35%;
+  z-index: -1;
+  box-shadow: 0 0 5px 5px rgb(255, 255, 255);
+  animation: brilho3 1s linear infinite;
+}
+@keyframes brilho3 {
+  50%,150%{
+    box-shadow: 0 0 2px 1px rgb(255, 255, 255);
+  }
+  100%{
+    box-shadow: 0 0 2px 3px rgb(255, 255, 255);
   }
 }
 
@@ -392,6 +428,12 @@ body {
   left: 0;
   z-index: 1;
 
+}
+.personagem.semiEscuro {
+  filter: brightness(40%);
+}
+.personagem.escuro {
+  filter: brightness(20%);
 }
 
 .personagem.esquerda {
@@ -409,7 +451,7 @@ body {
 .personagem.Parado {
   width: 90px;
   height: 100px;
-  background-image: url('/home/bennyjohann/benny/Git/Html/Projeto_3/parado.gif');
+  background-image: url('../parado.gif');
 
   position: absolute;
   transform: scaleX(1);
@@ -423,7 +465,7 @@ body {
 .personagem.Parado.esquerda {
   width: 90px;
   height: 100px;
-  background-image: url('/home/bennyjohann/benny/Git/Html/Projeto_3/parado.gif');
+  background-image: url('../parado.gif');
 
   position: absolute;
   transform: scaleX(-1);
@@ -507,6 +549,7 @@ body {
 .container {
   display: flex;
   z-index: 3;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .image {
@@ -517,6 +560,29 @@ body {
   margin-right: 0px;
   z-index: 3;
   position: relative;
+}
+.chuva {
+  width: 12vw;
+  height: 8vw;
+  background-image: url('https://img.freepik.com/vetores-premium/padrao-de-chao-de-grama-de-bloco-de-fundo-de-jogo-de-pixel_8071-46689.jpg');
+  background-size: cover;
+  margin-right: 0px;
+  z-index: 3;
+  position: relative;
+  filter:brightness(54%);
+
+
+}
+.noite {
+  width: 12vw;
+  height: 8vw;
+  background-image: url('https://img.freepik.com/vetores-premium/padrao-de-chao-de-grama-de-bloco-de-fundo-de-jogo-de-pixel_8071-46689.jpg');
+  background-size: cover;
+  margin-right: 0px;
+  z-index: 3;
+  position: relative;
+  filter:brightness(35%);
+
 }
 
 
@@ -532,4 +598,5 @@ body {
   z-index: -1;
   position: relative;
   top: -25px;
+  
 }

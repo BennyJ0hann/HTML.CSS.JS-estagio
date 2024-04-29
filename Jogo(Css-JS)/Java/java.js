@@ -86,9 +86,11 @@ function verificarPosicao() {
   var background3 = document.getElementById("background3");
   var background4 = document.getElementById("background4");
 
+  var chao = document.querySelectorAll("#chao");
 
   var cor = document.getElementById('cor');
 
+  var personagem = document.getElementById("personagem");
 
   var larguraJanela = window.innerWidth;
   var posicaoDiv = personagemMov.getBoundingClientRect().left;
@@ -101,6 +103,13 @@ function verificarPosicao() {
       background3.className = 'background first';
       background4.className = 'cloud4';
 
+      personagem.classList.remove("semiEscuro");
+
+      chao.forEach(function(elemento) {
+        elemento.classList.remove("chuva");
+        
+      });
+
       removerPingosDeAgua();
 
 
@@ -110,6 +119,18 @@ function verificarPosicao() {
       background2.className = 'cloud2';
       background3.className = 'cloud3';
       cor.className = 'background second';
+
+      personagem.classList.remove("escuro");
+      personagem.classList.add("semiEscuro");
+      
+
+      
+      chao.forEach(function(elemento) {
+        elemento.classList.remove("noite");
+        elemento.classList.add("chuva");
+        
+      });
+
 
       background4.className = 'relampago';
       setTimeout(() => background4.classList.add("flash"), 5000);
@@ -122,6 +143,18 @@ function verificarPosicao() {
       background.className = 'lua';
       background2.className = 'background first';
       background3.className = 'background third';
+
+      personagem.classList.remove("semiEscuro");
+      personagem.classList.add("escuro");
+
+
+      chao.forEach(function(elemento) {
+        elemento.classList.remove("chuva");
+        elemento.classList.add("noite");
+        
+      });
+
+
       removerPingosDeAgua();
 
       adicionarEstrelas()
@@ -205,16 +238,34 @@ function adicionarEstrelas() {
 
 
   if (!funcaoJaAcionada2) {
-    for (var i = 0; i < 20; i++) {
-      var estrela = document.createElement('div');
-      
-      estrela.className = 'estrela';
-      estrela.style.left = Math.random() * larguraTela2 + 'px';
-      estrela.style.top = Math.random() * alturaTela2 + 'px';
+    for (var i = 0; i < 51; i++) {
 
+      if(i < 17){
+        var estrela = document.createElement('div');
       
-
-      ceu.appendChild(estrela);
+        estrela.className = 'estrela';
+        estrela.style.left = Math.random() * larguraTela2 + 'px';
+        estrela.style.top = Math.random() * alturaTela2 + 'px';
+        
+        ceu.appendChild(estrela);
+      }else if(i > 17 || i < 34){
+        var estrela = document.createElement('div');
+      
+        estrela.className = 'estrela2';
+        estrela.style.left = Math.random() * larguraTela2 + 'px';
+        estrela.style.top = Math.random() * alturaTela2 + 'px';
+        
+        ceu.appendChild(estrela);
+      }else{
+        var estrela = document.createElement('div');
+      
+        estrela.className = 'estrela3';
+        estrela.style.left = Math.random() * larguraTela2 + 'px';
+        estrela.style.top = Math.random() * alturaTela2 + 'px';
+        
+        ceu.appendChild(estrela);
+      }
+ 
       
 
   }
@@ -223,9 +274,21 @@ function adicionarEstrelas() {
 }
 function removerEstrelas() {
   var estrelas = document.querySelectorAll('.estrela');
+  var estrelas2 = document.querySelectorAll('.estrela2');
+  var estrelas3 = document.querySelectorAll('.estrela3');
+
   estrelas.forEach(function(estrela) {
     estrela.parentNode.removeChild(estrela);
   });
+  estrelas2.forEach(function(estrela) {
+    estrela.parentNode.removeChild(estrela);
+  });
+  estrelas3.forEach(function(estrela) {
+    estrela.parentNode.removeChild(estrela);
+  });
+  
 
   funcaoJaAcionada2 = false;
 }
+
+
