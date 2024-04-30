@@ -1,15 +1,28 @@
-    Nesse diretório estão os estudos e projetos feitos na minha trajetória
-de aprendizado em Html e CSS no estágio feito no CRO (Conselho Regional de Odontoligia).
+# Aprendizado em Html, CSS e JavaScript no estágio
 
-    Diretórios existentes e o que contém:
+Neste repositório estão os estudos e projetos feitos na minha trajetória de aprendizado e
+estudo em Html, CSS e JavaScript no estágio feito no CRO (Conselho Regional de Odontoligia).
 
-        Catálogo_de_Carros: Um projeto feito somente em Html para conhecer e aprender sobre as
+## Visão Geral
+
+
+Diretórios existentes e o que contém:
+
+        Projeto 1 - Catálogo_de_Carros: Um projeto feito somente em Html para conhecer e aprender sobre as
         ferramentas;
 
-        Wiki: Um projeto feito somente em Html e com um pouco de CSS, feito mais de conhecimento
+        Projeto 2 - Wiki: Um projeto feito somente em Html e com um pouco de CSS, feito mais de conhecimento
         sobre o estudo feito em Html;
 
-        Sombra_Digital: Um projeto feito em Html, CSS e JavaScript para contar uma história 
+        Projeto 3 - Sombra_Digital: Um projeto feito em Html, CSS e JavaScript para contar uma história 
         em um universo cyberpunk.
 
-        Personagens:Um projeto feito para treinar paginação e html, css e javaScript, com intuito de mostrar personagens e um pouco de sua história.
+        Projeto 4 - Personagens:Um projeto feito para treinar paginação em html, css e javaScript, com intuito de mostrar personagens e um pouco de sua história.
+
+        Projeto 5 - Jogo (Css+JS): Um projeto feito para testar meus conhecimentos em Css e JavaScript, a personagem se move com as teclas 'W'(salto) 'A'(move à esquerda) e 'D'(move à direita).
+
+
+## Pré-requisitos
+
+    Caso queira ver os projetos poderá baixar as pastas somente de um projeto específico, cada projeto é independente de outro.
+
